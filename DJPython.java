@@ -434,17 +434,37 @@ public class DJPython {
     private static void albumhip() {//lista de albumes de hip hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                         albumes de hip hop                         |");
+        System.out.println("        |                      Astroworld – Travis Scott                     |");
+        System.out.println("        |               good kid, m.A.A.d city – Kendrick Lamar              |");
+        System.out.println("        |                  The Marshall Mathers LP – Eminem                  |");
+        System.out.println("        |                       Graduation – Kanye West                      |");
+        System.out.println("        |           My Beautiful Dark Twisted Fantasy – Kanye West           |");
+        System.out.println("        |                           Illmatic – Nas                           |");
+        System.out.println("        |             Man on the Moon: The End of Day – Kid Cudi             |");
+        System.out.println("        |                       DAMN. – Kendrick Lamar                       |");
+        System.out.println("        |                    Nothing Was the Same – Drake                    |");
+        System.out.println("        |                  The College Dropout – Kanye West                  |");
         System.out.println("        |____________________________________________________________________|");    }
     private static void artistaship() {//lista de artistas de hip hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                        artistas de hip hop                         |");
+        System.out.println("        |                            Metro Boomin                            |");
+        System.out.println("        |                         Tyler, The Creator                         |");
+        System.out.println("        |                             A$AP Rocky                             |");
+        System.out.println("        |                            Travis Scott                            |");
+        System.out.println("        |                           Kendrick Lamar                           |");
+        System.out.println("        |                             21 Savage                              |");
+        System.out.println("        |                            Lil Uzi Vert                            |");
+        System.out.println("        |                            Frank Ocean                             |");
+        System.out.println("        |                               Logic                                |");
+        System.out.println("        |                              Pusha T                               |");
         System.out.println("        |____________________________________________________________________|");    }
     private static void similarhip() {//lista de generos similares al hip hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                    generos similares al hip hop                    |");
+        System.out.println("        |                                Trap                                |");
+        System.out.println("        |                                Drill                               |");
+        System.out.println("        |                                R&B                                 |");
         System.out.println("        |____________________________________________________________________|");    }
     //modulo R%B
     public static void rbdesint(){//lector de R&B
@@ -475,17 +495,37 @@ public class DJPython {
     private static void albumrb() {//lista de albumes de rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           albumes de R&B                           |");
+        System.out.println("        |                        Blonde – Frank Ocean                        |");
+        System.out.println("        |                    True to Self – Bryson Tiller                    |");
+        System.out.println("        |                      Freudian – Daniel Caesar                      |");
+        System.out.println("        |                             Ctrl – SZA                             |");
+        System.out.println("        |                 Awaken, My Love! – Childish Gambino                |");
+        System.out.println("        |                    Channel Orange – Frank Ocean                    |");
+        System.out.println("        |                        Free Spirit – Khalid                        |");
+        System.out.println("        |              Because the Internet – Childish Gambino               |");
+        System.out.println("        |                       War & Leisure – Miguel                       |");
+        System.out.println("        |                        Starboy – The Weeknd                        |");
         System.out.println("        |____________________________________________________________________|");    }
     private static void artistasrb() {//lista de artistas de rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                          artistas de R&B                           |");
+        System.out.println("        |                            Brent Faiyaz                            |");
+        System.out.println("        |                               Giveon                               |");
+        System.out.println("        |                             Jorja Smith                            |");
+        System.out.println("        |                               H.E.R.                               |");
+        System.out.println("        |                            Teyana Taylor                           |");
+        System.out.println("        |                             Tory Lanez                             |");
+        System.out.println("        |                                dvsn                                |");
+        System.out.println("        |                            The Internet                            |");
+        System.out.println("        |                             Omar Apollo                            |");
+        System.out.println("        |                             Lucky Daye                             |");
         System.out.println("        |____________________________________________________________________|");    }
     private static void similarrb() { //lista de generos simolates al rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                      generos similares al R&B                      |");
+        System.out.println("        |                           Lo-Fi/Chillhop                           |");
+        System.out.println("        |                                Soul                                |");
+        System.out.println("        |                              Downtempo                             |");
         System.out.println("        |____________________________________________________________________|");    }
     //acaba el descubrimiento musical
     public static void teoria(){//inicia teoria musical
@@ -2014,7 +2054,7 @@ public class DJPython {
     public static void librerias(){//menu genral de las librerias
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                     Elija el Genero Musical Deseado                |");
+        System.out.println("        |                     Elija el Género Musical Deseado                |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                            1. Rock                                 |");
         System.out.println("        |                                                                    |");
@@ -2024,7 +2064,7 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        |                            4. Indie                                |");
         System.out.println("        |                                                                    |");
-        System.out.println("        |                            5. Hip-Hop / Rap                        |");
+        System.out.println("        |                            5. Hip-Hop/Rap                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                            6. R&B                                  |");
         System.out.println("        |                                                                    |");
@@ -2091,7 +2131,7 @@ public class DJPython {
     private static void librocklista1() {//aqui va el playlist 1 de rock
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 1 rock                          |");
+        System.out.println("        |                           Playlist 1 Rock                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                  Smells Like Teen Spirit - Nirvana                 |");
         System.out.println("        |                 Sweet Child O' Mine - Guns N' Roses                |");
@@ -2110,7 +2150,7 @@ public class DJPython {
     private static void librocklista2() {//aqui va el playlist 2 de rock
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 2 rock                          |");
+        System.out.println("        |                           Playlist 2 Rock                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                  Hoy Estoy Raro - Cuarteto de Nos                  |");
         System.out.println("        |                 Another One Bites the Dust - Queen                 |");
@@ -2129,7 +2169,7 @@ public class DJPython {
     private static void librocklista3() {//aqui va el playlist 3 de rock
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 3 rock                          |");
+        System.out.println("        |                           Playlist 3 Rock                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                Welcome to the Jungle - Guns N' Roses               |");
         System.out.println("        |                          Lithium - Nirvana                         |");
@@ -2167,7 +2207,7 @@ public class DJPython {
     private static void libpoplista1() {//aqui va el playlist 1 de pop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 1 pop                           |");
+        System.out.println("        |                           Playlist 1 Pop                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                    Blinding Lights - The Weeknd                    |");
         System.out.println("        |                      Shape of You - Ed Sheeran                     |");
@@ -2186,7 +2226,7 @@ public class DJPython {
     private static void libpoplista2() {//aqui va el playlist 2 de pop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 2 pop                           |");
+        System.out.println("        |                           Playlist 2 Pop                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                   Watermelon Sugar - Harry Styles                  |");
         System.out.println("        |                     Don't Start Now - Dua Lipa                     |");
@@ -2205,7 +2245,7 @@ public class DJPython {
     private static void libpoplista3() {//aqui va el playlist 3 de pop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 3 pop                           |");
+        System.out.println("        |                           Playlist 3 Pop                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                     Thriller - Michael Jackson                     |");
         System.out.println("        |                    Billie Jean - Michael Jackson                   |");
@@ -2243,7 +2283,7 @@ public class DJPython {
     private static void libfolklista1() {//aqui va el playlist 1 de folk
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 1 folk                          |");
+        System.out.println("        |                           Playlist 1 Folk                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                       Ho Hey - The Lumineers                       |");
         System.out.println("        |                 Little Talks - Of Monsters and Men                 |");
@@ -2262,7 +2302,7 @@ public class DJPython {
     private static void libfolklista2() {//aqui va el playlist 2 de folk
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 2 folk                          |");
+        System.out.println("        |                           Playlist 2 Folk                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                      Cleopatra - The Lumineers                     |");
         System.out.println("        |                 Big Black Car - Gregory Alan Isakov                |");
@@ -2281,7 +2321,7 @@ public class DJPython {
     private static void libfolklista3() {//aqui va el playlist 3 de folk
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           playlist 3 folk                          |");
+        System.out.println("        |                           Playlist 3 Folk                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                         Sedona - Houndmouth                        |");
         System.out.println("        |                     Life in Color - OneRepublic                    |");
@@ -2319,7 +2359,7 @@ public class DJPython {
     private static void libindlista1() {//aqui va el playlist 1 de indie
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                          playlist 1 indie                          |");
+        System.out.println("        |                          Playlist 1 Indie                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                     R U Mine? - Arctic Monkeys                     |");
         System.out.println("        |                        505 - Arctic Monkeys                        |");
@@ -2338,7 +2378,7 @@ public class DJPython {
     private static void libindlista2() {//aqui va el playlist 2 de indie
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                          playlist 2 indie                          |");
+        System.out.println("        |                          Playlist 2 Indie                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                        Electric Feel - MGMT                        |");
         System.out.println("        |                          Oblivion - Grimes                         |");
@@ -2357,7 +2397,7 @@ public class DJPython {
     private static void libindlista3() {//aqui va el playlist 3 de indie
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                          playlist 3 indie                          |");
+        System.out.println("        |                          Playlist 3 Indie                          |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                Somebody That I Used to Know - Gotye                |");
         System.out.println("        |                    Cough Syrup - Young the Giant                   |");
@@ -2395,7 +2435,7 @@ public class DJPython {
     private static void libhiplista1() {//aqui va el playlist 1 de hip-hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                         playlist 1 hip-hop                         |");
+        System.out.println("        |                       Playlist 1 Hip-Hop/Rap                       |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                      Sicko Mode - Travis Scott                     |");
         System.out.println("        |                      HUMBLE. - Kendrick Lamar                      |");
@@ -2414,7 +2454,7 @@ public class DJPython {
     private static void libhiplista2() {//aqui va el playlist 2 de hip-hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                         playlist 2 hip-hop                         |");
+        System.out.println("        |                       Playlist 2 Hip-Hop/Rap                       |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                       Love Sosa - Chief Keef                       |");
         System.out.println("        |                       Antidote - Travis Scott                      |");
@@ -2433,7 +2473,7 @@ public class DJPython {
     private static void libhiplista3() {//aqui va el playlist 3 de hip hop
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                        playlist 3 hip-hop                          |");
+        System.out.println("        |                       Playlist 3 Hip-Hop/Rap                       |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                    Empire State of Mind - Jay-Z                    |");
         System.out.println("        |                        Run This Town - Jay-Z                       |");
@@ -2471,7 +2511,7 @@ public class DJPython {
     private static void librblista1() {//aqui va el playlist 1 de rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                            playlist 1 rb                           |");
+        System.out.println("        |                           Playlist 1 R&B                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                       Earned It - The Weeknd                       |");
         System.out.println("        |                       The Hills - The Weeknd                       |");
@@ -2490,7 +2530,7 @@ public class DJPython {
     private static void librblista2() {//aqui va el playlist 2 de rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                            playlist 2 rb                           |");
+        System.out.println("        |                           Playlist 2 R&B                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                            Talk - Khalid                           |");
         System.out.println("        |                           Crew - GoldLink                          |");
@@ -2509,7 +2549,7 @@ public class DJPython {
     private static void librblista3() {//aqui va el playlist 3 de rb
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                            playlist 3 rb                           |");
+        System.out.println("        |                           Playlist 3 R&B                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                        Love - Kendrick Lamar                       |");
         System.out.println("        |                      Loyalty - Kendrick Lamar                      |");
