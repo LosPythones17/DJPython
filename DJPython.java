@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class DJPython {
     static char comillas = '"';
+
     static void pausar() {  //metodo para pausas de información
         System.out.println("\nPresiona ENTER para continuar...");
         try {
@@ -9,6 +10,7 @@ public class DJPython {
             // Ignorar errores
         }
     }
+
     static boolean ejecutando = true;
     static String[] qstarm1;//arreglos de preguntas
     static String[] qstarm1opc1;//arreglos de opciones
@@ -53,22 +55,28 @@ public class DJPython {
     static int aciertos;//cuestionarios
     static int errores;//cuestionarios
     static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        while (ejecutando){
+
+    public static void main(String[] args) {
+        while (ejecutando) {
             proceso1();
         }
     }
+
     public static void proceso1() {
         menu();
         int userinput = scanner.nextInt();
         switch (userinput) {
-            case 1: descubrimiento();
+            case 1:
+                descubrimiento();
                 break;
-            case 2: teoria();
+            case 2:
+                teoria();
                 break;
-            case 3: equipo();
+            case 3:
+                equipo();
                 break;
-            case 4: librerias();
+            case 4:
+                librerias();
                 break;
             case 5:
                 ejecutando = false;
@@ -80,7 +88,8 @@ public class DJPython {
                 break;
         }
     }
-    public static void menu(){
+
+    public static void menu() {
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                      Elija la Sección Deseada                      |");
@@ -94,8 +103,10 @@ public class DJPython {
         System.out.println("        |                      4. Librerias                                  |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                      5. Salir del programa                         |");
-        System.out.println("        |____________________________________________________________________|");}
-    public static void descubrimiento(){
+        System.out.println("        |____________________________________________________________________|");
+    }
+
+    public static void descubrimiento() {
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                     Elija el Genero Musical Deseado                |");
@@ -114,23 +125,32 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        |                            7. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
-        desint();}
+        desint();
+    }
+
     public static void desint() { //lector de descubrimiento
         int userdesinput = scanner.nextInt();
         switch (userdesinput) {
-            case 1: rockdesint();
+            case 1:
+                rockdesint();
                 break;
-            case 2: popdesint();
+            case 2:
+                popdesint();
                 break;
-            case 3: folkdesint();
+            case 3:
+                folkdesint();
                 break;
-            case 4: indiedesint();
+            case 4:
+                indiedesint();
                 break;
-            case 5: hipdesint();
+            case 5:
+                hipdesint();
                 break;
-            case 6: rbdesint();
+            case 6:
+                rbdesint();
                 break;
-            case 7: proceso1();
+            case 7:
+                proceso1();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -139,7 +159,8 @@ public class DJPython {
                 break;
         }
     }
-    public static void desmenu(){ //menu de los generos de descubrimiento
+
+    public static void desmenu() { //menu de los generos de descubrimiento
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                     Elija la Subsección Deseada                    |");
@@ -153,24 +174,29 @@ public class DJPython {
         System.out.println("        |                            4. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     //modulo de rock
     public static void rockdesint() {
         desmenu();
         int rockdesint = scanner.nextInt();
         switch (rockdesint) {
-            case 1: similarrock();
+            case 1:
+                similarrock();
                 pausar();
                 rockdesint();
                 break;
-            case 2: artistasrock();
+            case 2:
+                artistasrock();
                 pausar();
                 rockdesint();
                 break;
-            case 3: albumrock();
+            case 3:
+                albumrock();
                 pausar();
                 rockdesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -179,6 +205,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumrock() {//lista de albumes de rock
         screen();
         System.out.println("        |                                                                    |");
@@ -194,6 +221,7 @@ public class DJPython {
         System.out.println("        |                   Is This It – The Strokes (2001)                  |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     private static void artistasrock() {//lista de artistas de rock
         screen();
         System.out.println("        |                                                                    |");
@@ -209,6 +237,7 @@ public class DJPython {
         System.out.println("        |                        Red Hot Chili Peppers                       |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     private static void similarrock() { //lista de generos similaresal rock
         screen();
         System.out.println("        |                                                                    |");
@@ -217,24 +246,29 @@ public class DJPython {
         System.out.println("        |                               Metal                                |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     //modulo de pop
-    public static void popdesint(){//lector de pop
+    public static void popdesint() {//lector de pop
         desmenu();
         int popdesint = scanner.nextInt();
         switch (popdesint) {
-            case 1: similarpop();
+            case 1:
+                similarpop();
                 pausar();
                 popdesint();
                 break;
-            case 2: artistaspop();
+            case 2:
+                artistaspop();
                 pausar();
                 popdesint();
                 break;
-            case 3: albumpop();
+            case 3:
+                albumpop();
                 pausar();
                 popdesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -243,6 +277,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumpop() {//lista de albumes de pop
         screen();
         System.out.println("        |                                                                    |");
@@ -258,6 +293,7 @@ public class DJPython {
         System.out.println("        |           FutureSex/LoveSounds – Justin Timberlake (2006)          |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     private static void artistaspop() {//lista de artistas de pop
         screen();
         System.out.println("        |                                                                    |");
@@ -273,6 +309,7 @@ public class DJPython {
         System.out.println("        |                           Billie Eilish                            |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     private static void similarpop() {//lista de generos similares al pop
         screen();
         System.out.println("        |                                                                    |");
@@ -281,25 +318,31 @@ public class DJPython {
         System.out.println("        |                                R&B                                 |");
         System.out.println("        |                             Synthwave                              |");
         System.out.println("        |                            Electropop                              |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     //modulo de folk
     public static void folkdesint() {//lector de folk
         desmenu();
         int folkdesint = scanner.nextInt();
         switch (folkdesint) {
-            case 1: similarfolk();
+            case 1:
+                similarfolk();
                 pausar();
                 folkdesint();
                 break;
-            case 2: artistasfolk();
+            case 2:
+                artistasfolk();
                 pausar();
                 folkdesint();
                 break;
-            case 3: albumfolk();
+            case 3:
+                albumfolk();
                 pausar();
                 folkdesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -308,6 +351,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumfolk() {//lista de albumes de folk
         screen();
         System.out.println("        |                                                                    |");
@@ -323,6 +367,7 @@ public class DJPython {
         System.out.println("        |               Wanted on Voyage – George Ezra (2014)                |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     private static void artistasfolk() {//lista de artistas de folk
         screen();
         System.out.println("        |                                                                    |");
@@ -336,32 +381,40 @@ public class DJPython {
         System.out.println("        |                             Iron & Wine                            |");
         System.out.println("        |                            José González                           |");
         System.out.println("        |                             Ed Maverick                            |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void similarfolk() {//lista de generos similares al folk
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                               Country                              |");
         System.out.println("        |                          Singer-Songwriter                         |");
         System.out.println("        |                              Americana                             |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     //modulo de indie
-    public static void indiedesint(){//lector de indie
+    public static void indiedesint() {//lector de indie
         desmenu();
         int indiedesint = scanner.nextInt();
         switch (indiedesint) {
-            case 1: similarindie();
+            case 1:
+                similarindie();
                 pausar();
                 indiedesint();
                 break;
-            case 2: artistasindie();
+            case 2:
+                artistasindie();
                 pausar();
                 indiedesint();
                 break;
-            case 3: albumindie();
+            case 3:
+                albumindie();
                 pausar();
                 indiedesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -370,6 +423,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumindie() {//lista de albumes de indie
         screen();
         System.out.println("        |                                                                    |");
@@ -383,7 +437,9 @@ public class DJPython {
         System.out.println("        |                D>E>A>T>H>M>E>T>A>L - Panchiko (2000)               |");
         System.out.println("        |                        Para Mi - Cuco (2019)                       |");
         System.out.println("        |                      Antics – Interpol (2004)                      |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void artistasindie() {//lista de artistas de indie
         screen();
         System.out.println("        |                                                                    |");
@@ -397,32 +453,40 @@ public class DJPython {
         System.out.println("        |                         Policías y Ladrones                        |");
         System.out.println("        |                       Margarita Siempre Viva                       |");
         System.out.println("        |                               Bratty                               |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void similarindie() {// lista de generos similares al indie
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                          Alternative Rock                          |");
         System.out.println("        |                              Dream Pop                             |");
         System.out.println("        |                              Post Punk                             |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     //modulo hip hop
-    public static void hipdesint(){//lector de hip hop
+    public static void hipdesint() {//lector de hip hop
         desmenu();
         int hipdesint = scanner.nextInt();
         switch (hipdesint) {
-            case 1: similarhip();
+            case 1:
+                similarhip();
                 pausar();
                 hipdesint();
                 break;
-            case 2: artistaship();
+            case 2:
+                artistaship();
                 pausar();
                 hipdesint();
                 break;
-            case 3: albumhip();
+            case 3:
+                albumhip();
                 pausar();
                 hipdesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -431,6 +495,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumhip() {//lista de albumes de hip hop
         screen();
         System.out.println("        |                                                                    |");
@@ -444,7 +509,9 @@ public class DJPython {
         System.out.println("        |                       DAMN. – Kendrick Lamar                       |");
         System.out.println("        |                    Nothing Was the Same – Drake                    |");
         System.out.println("        |                  The College Dropout – Kanye West                  |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void artistaship() {//lista de artistas de hip hop
         screen();
         System.out.println("        |                                                                    |");
@@ -458,32 +525,40 @@ public class DJPython {
         System.out.println("        |                            Frank Ocean                             |");
         System.out.println("        |                               Logic                                |");
         System.out.println("        |                              Pusha T                               |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void similarhip() {//lista de generos similares al hip hop
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                                Trap                                |");
         System.out.println("        |                                Drill                               |");
         System.out.println("        |                                R&B                                 |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     //modulo R%B
-    public static void rbdesint(){//lector de R&B
+    public static void rbdesint() {//lector de R&B
         desmenu();
         int rbdesint = scanner.nextInt();
         switch (rbdesint) {
-            case 1: similarrb();
+            case 1:
+                similarrb();
                 pausar();
                 rbdesint();
                 break;
-            case 2: artistasrb();
+            case 2:
+                artistasrb();
                 pausar();
                 rbdesint();
                 break;
-            case 3: albumrb();
+            case 3:
+                albumrb();
                 pausar();
                 rbdesint();
                 break;
-            case 4: descubrimiento();
+            case 4:
+                descubrimiento();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -492,6 +567,7 @@ public class DJPython {
                 break;
         }
     }
+
     private static void albumrb() {//lista de albumes de rb
         screen();
         System.out.println("        |                                                                    |");
@@ -505,7 +581,9 @@ public class DJPython {
         System.out.println("        |              Because the Internet – Childish Gambino               |");
         System.out.println("        |                       War & Leisure – Miguel                       |");
         System.out.println("        |                        Starboy – The Weeknd                        |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void artistasrb() {//lista de artistas de rb
         screen();
         System.out.println("        |                                                                    |");
@@ -519,16 +597,20 @@ public class DJPython {
         System.out.println("        |                            The Internet                            |");
         System.out.println("        |                             Omar Apollo                            |");
         System.out.println("        |                             Lucky Daye                             |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     private static void similarrb() { //lista de generos simolates al rb
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                           Lo-Fi/Chillhop                           |");
         System.out.println("        |                                Soul                                |");
         System.out.println("        |                              Downtempo                             |");
-        System.out.println("        |____________________________________________________________________|");    }
+        System.out.println("        |____________________________________________________________________|");
+    }
+
     //acaba el descubrimiento musical
-    public static void teoria(){//inicia teoria musical
+    public static void teoria() {//inicia teoria musical
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                     Elija la Subsección Deseada                    |");
@@ -545,21 +627,29 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        |                            6. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
-        teoint();}
-    public static void teoint(){//lectura de teoria musical
+        teoint();
+    }
+
+    public static void teoint() {//lectura de teoria musical
         int userteoinput = scanner.nextInt();
         switch (userteoinput) {
-            case 1: armonia();
+            case 1:
+                armonia();
                 break;
-            case 2: melodia();
+            case 2:
+                melodia();
                 break;
-            case 3: ritmo();
+            case 3:
+                ritmo();
                 break;
-            case 4: escalas();
+            case 4:
+                escalas();
                 break;
-            case 5: cuestionarios();
+            case 5:
+                cuestionarios();
                 break;
-            case 6: proceso1();
+            case 6:
+                proceso1();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -672,7 +762,7 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        | El cambio es necesario para los eventos que son entendidos como    |");
         System.out.println("        | relacionados o no relacionados. Usualmente las melodías constan de |");
-        System.out.println("        | una o más frases musicales, es decir, "+ comillas + "motivos" + comillas + " y son por lo gene- |");
+        System.out.println("        | una o más frases musicales, es decir, " + comillas + "motivos" + comillas + " y son por lo gene- |");
         System.out.println("        | ral, repetidas a lo largo de una canción o pieza en varias formas. |");
         System.out.println("        |                                                                    |");
         System.out.println("        | La mayoría de la música occidental utiliza la escala de 12 tonos.  |");
@@ -682,6 +772,7 @@ public class DJPython {
         pausar();
         teoria();
     }
+
     private static void armonia() {//aqui va la teoria de armonia musical
         screen();
         System.out.println("        |                                                                    |");
@@ -703,7 +794,8 @@ public class DJPython {
         pausar();
         teoria();
     }
-    public static void cuestionarios(){//menu de cuestionarios
+
+    public static void cuestionarios() {//menu de cuestionarios
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                    Elija El Cuestionario Deseado                   |");
@@ -726,27 +818,38 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        |                            9. Salir                                |");
         System.out.println("        |____________________________________________________________________|");
-        qstint();}
-    public static void qstint(){//lectura de cuestionarios
+        qstint();
+    }
+
+    public static void qstint() {//lectura de cuestionarios
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: armonia1();
+        switch (userqstint) {
+            case 1:
+                armonia1();
                 break;
-            case 2: armonia2();
+            case 2:
+                armonia2();
                 break;
-            case 3: melodia1();
+            case 3:
+                melodia1();
                 break;
-            case 4: melodia2();
+            case 4:
+                melodia2();
                 break;
-            case 5: ritmo1();
+            case 5:
+                ritmo1();
                 break;
-            case 6: ritmo2();
+            case 6:
+                ritmo2();
                 break;
-            case 7: escalas1();
+            case 7:
+                escalas1();
                 break;
-            case 8: escalas2();
+            case 8:
+                escalas2();
                 break;
-            case 9: teoria();
+            case 9:
+                teoria();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -755,7 +858,8 @@ public class DJPython {
                 break;
         }
     }
-    private static void menucuestionarios(){//menu de los cuestionarios
+
+    private static void menucuestionarios() {//menu de los cuestionarios
         System.out.println("        |                                                                    |");
         System.out.println("        |                        Consta de 10 preguntas                      |");
         System.out.println("        |                                                                    |");
@@ -764,6 +868,7 @@ public class DJPython {
         System.out.println("        |                             2. Volver                              |");
         System.out.println("        |____________________________________________________________________|");
     }
+
     //nota: aquí inician los cuestionarios, en cada uno de ellos es necesario cambiar los resultados y las preguntas que estan asignadas al inicio de cada modulo
     //nota2: para el formato de cuadro (DJPython) de izquierda a derecha siempre va a ser de 5 espacios, pero la separacion a la derecha se cambia manualmente en ña pregunta
     private static void escalas2() {
@@ -776,10 +881,12 @@ public class DJPython {
         System.out.println("        |       Subtema: Mayor, menor, cromática y su impacto emocional      |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: escalas2_1();
+        switch (userqstint) {
+            case 1:
+                escalas2_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -788,69 +895,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void escalas2_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstesc2 = new String[10];
         qstesc2opc1 = new String[10];
         qstesc2opc2 = new String[10];
         qstesc2opc3 = new String[10];
         qstesc2opc4 = new String[10];
-        qstesc2[0]= "¿Qué define el carácter sonoro de una escala?       |";//asignacion para las preguntas
-        qstesc2[1]= "¿Cuántas notas tiene la escala cromática?           |";//para el formato de cuadro llena 52 espacios y "|"
-        qstesc2[2]= "¿Qué patrón utiliza la escala cromática?            |";
-        qstesc2[3]= "¿Qué emoción se asocia usualmente a la escala menor?|";
-        qstesc2[4]= "¿Qué intervalo define el paso entre Si y Do?        |";
-        qstesc2[5]= "¿Qué función cumplen los intervalos en una escala?  |";
-        qstesc2[6]= "Qué tipo de escala se asocia con sonidos brillantes?|";
-        qstesc2[7]= "¿Qué relación tienen los acordes con las escalas?   |";
-        qstesc2[8]= "¿Para qué sirve aprender escalas en un instrumento? |";
-        qstesc2[9]= "Escala con únicamente semitonos consecutivos       |";
-        qstesc2opc1[0]="La forma física del instrumento                   |";//opcion 1
-        qstesc2opc1[1]="Cinco                                             |";//para el formato de cuadro llena 51 espacios y "|"
-        qstesc2opc1[2]="Tonos únicamente                                  |";
-        qstesc2opc1[3]="Tensión fuerte                                    |";
-        qstesc2opc1[4]="Tono                                              |";
-        qstesc2opc1[5]="Crear melodías sin orden                          |";
-        qstesc2opc1[6]="Escala disminuida                                 |";
-        qstesc2opc1[7]="No tienen relación                                |";
-        qstesc2opc1[8]="Mejorar técnica y comprensión musical             |";
-        qstesc2opc1[9]="La escala cromática                               |";
-        qstesc2opc2[0]="El volumen de cada nota                           |";//opcion 2
-        qstesc2opc2[1]="Siete                                             |";
-        qstesc2opc2[2]="Solo semitonos                                    |";
-        qstesc2opc2[3]="Alegría intensa                                   |";
-        qstesc2opc2[4]="Semitono                                          |";
-        qstesc2opc2[5]="Ajustar la velocidad                              |";
-        qstesc2opc2[6]="La escala menor                                   |";
-        qstesc2opc2[7]="Se forman usando sus notas                        |";
-        qstesc2opc2[8]="Memorizar canciones                               |";
-        qstesc2opc2[9]="Escala mayor                                      |";
-        qstesc2opc3[0]="Su velocidad rítmica                              |";//opcion 3
-        qstesc2opc3[1]="Ocho                                              |";
-        qstesc2opc3[2]="Tonos y semitonos mezclados                       |";
-        qstesc2opc3[3]="Melancolía                                        |";
-        qstesc2opc3[4]="Intervalo aumentado                               |";
-        qstesc2opc3[5]="Organizar la estructura sonora                    |";
-        qstesc2opc3[6]="La escala mayor                                   |";
-        qstesc2opc3[7]="Dependen del tempo                                |";
-        qstesc2opc3[8]="Cambiar el timbre del instrumento                 |";
-        qstesc2opc3[9]="Pentatónica menor                                 |";
-        qstesc2opc4[0]="Las distancias entre sus notas                    |";//opcion 4
-        qstesc2opc4[1]="Doce                                              |";
-        qstesc2opc4[2]="Ningún orden específico                           |";
-        qstesc2opc4[3]="Neutralidad emocional                             |";
-        qstesc2opc4[4]="Intervalo disminuido                              |";
-        qstesc2opc4[5]="Romper la armonía                                 |";
-        qstesc2opc4[6]="Escala aumentada                                  |";
-        qstesc2opc4[7]="Se producen al azar                               |";
-        qstesc2opc4[8]="Solo para leer partituras                         |";
-        qstesc2opc4[9]="Escala modal                                      |";
+        qstesc2[0] = "¿Qué define el carácter sonoro de una escala?       |";//asignacion para las preguntas
+        qstesc2[1] = "¿Cuántas notas tiene la escala cromática?           |";//para el formato de cuadro llena 52 espacios y "|"
+        qstesc2[2] = "¿Qué patrón utiliza la escala cromática?            |";
+        qstesc2[3] = "¿Qué emoción se asocia usualmente a la escala menor?|";
+        qstesc2[4] = "¿Qué intervalo define el paso entre Si y Do?        |";
+        qstesc2[5] = "¿Qué función cumplen los intervalos en una escala?  |";
+        qstesc2[6] = "Qué tipo de escala se asocia con sonidos brillantes?|";
+        qstesc2[7] = "¿Qué relación tienen los acordes con las escalas?   |";
+        qstesc2[8] = "¿Para qué sirve aprender escalas en un instrumento? |";
+        qstesc2[9] = "Escala con únicamente semitonos consecutivos       |";
+        qstesc2opc1[0] = "La forma física del instrumento                   |";//opcion 1
+        qstesc2opc1[1] = "Cinco                                             |";//para el formato de cuadro llena 51 espacios y "|"
+        qstesc2opc1[2] = "Tonos únicamente                                  |";
+        qstesc2opc1[3] = "Tensión fuerte                                    |";
+        qstesc2opc1[4] = "Tono                                              |";
+        qstesc2opc1[5] = "Crear melodías sin orden                          |";
+        qstesc2opc1[6] = "Escala disminuida                                 |";
+        qstesc2opc1[7] = "No tienen relación                                |";
+        qstesc2opc1[8] = "Mejorar técnica y comprensión musical             |";
+        qstesc2opc1[9] = "La escala cromática                               |";
+        qstesc2opc2[0] = "El volumen de cada nota                           |";//opcion 2
+        qstesc2opc2[1] = "Siete                                             |";
+        qstesc2opc2[2] = "Solo semitonos                                    |";
+        qstesc2opc2[3] = "Alegría intensa                                   |";
+        qstesc2opc2[4] = "Semitono                                          |";
+        qstesc2opc2[5] = "Ajustar la velocidad                              |";
+        qstesc2opc2[6] = "La escala menor                                   |";
+        qstesc2opc2[7] = "Se forman usando sus notas                        |";
+        qstesc2opc2[8] = "Memorizar canciones                               |";
+        qstesc2opc2[9] = "Escala mayor                                      |";
+        qstesc2opc3[0] = "Su velocidad rítmica                              |";//opcion 3
+        qstesc2opc3[1] = "Ocho                                              |";
+        qstesc2opc3[2] = "Tonos y semitonos mezclados                       |";
+        qstesc2opc3[3] = "Melancolía                                        |";
+        qstesc2opc3[4] = "Intervalo aumentado                               |";
+        qstesc2opc3[5] = "Organizar la estructura sonora                    |";
+        qstesc2opc3[6] = "La escala mayor                                   |";
+        qstesc2opc3[7] = "Dependen del tempo                                |";
+        qstesc2opc3[8] = "Cambiar el timbre del instrumento                 |";
+        qstesc2opc3[9] = "Pentatónica menor                                 |";
+        qstesc2opc4[0] = "Las distancias entre sus notas                    |";//opcion 4
+        qstesc2opc4[1] = "Doce                                              |";
+        qstesc2opc4[2] = "Ningún orden específico                           |";
+        qstesc2opc4[3] = "Neutralidad emocional                             |";
+        qstesc2opc4[4] = "Intervalo disminuido                              |";
+        qstesc2opc4[5] = "Romper la armonía                                 |";
+        qstesc2opc4[6] = "Escala aumentada                                  |";
+        qstesc2opc4[7] = "Se producen al azar                               |";
+        qstesc2opc4[8] = "Solo para leer partituras                         |";
+        qstesc2opc4[9] = "Escala modal                                      |";
         int[] respuestasCorrectas = {4, 4, 2, 3, 2, 3, 3, 2, 1, 1};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstesc2[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -868,11 +976,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -882,41 +990,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     private static void escalas1() {
         screen();//aqui se modifica el tema y subtema de escalas 1
         System.out.println("        |                                                                    |");
@@ -927,10 +1036,12 @@ public class DJPython {
         System.out.println("        |  Subtema: Intervalos, patrones y función emocional de las escalas  |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: escalas1_1();
+        switch (userqstint) {
+            case 1:
+                escalas1_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -939,69 +1050,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void escalas1_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstesc1 = new String[10];
         qstesc1opc1 = new String[10];
         qstesc1opc2 = new String[10];
         qstesc1opc3 = new String[10];
         qstesc1opc4 = new String[10];
-        qstesc1[0]= "¿Qué característica define a una escala musical?    |";//asignacion para las preguntas
-        qstesc1[1]= "Notas bases de las escalas en la música occidental  |";//para el formato de cuadro llena 52 espacios y "|"
-        qstesc1[2]= "Distancia mínima entre dos notas consecutivas       |";
-        qstesc1[3]= "Patrón de tonos y semitonos de la escala mayor      |";
-        qstesc1[4]= "Tipo de emociones suele transmitir la escala mayor  |";
-        qstesc1[5]= "Patrón define a la escala menor natural             |";
-        qstesc1[6]= "¿Qué es un intervalo musical?                       |";
-        qstesc1[7]= "¿Qué tipo de intervalo se encuentra entre Mi–Fa?    |";
-        qstesc1[8]= "¿Qué papel tiene la tonalidad en una pieza musical? |";
-        qstesc1[9]= "¿De dónde son los acordes principales de Do mayor? |";
-        qstesc1opc1[0]="Un conjunto de notas organizadas por intervalos   |";//opcion 1
-        qstesc1opc1[1]="Las doce notas cromáticas                         |";//para el formato de cuadro llena 51 espacios y "|"
-        qstesc1opc1[2]="Tono                                              |";
-        qstesc1opc1[3]="T–T–S–T–T–T–S                                     |";
-        qstesc1opc1[4]="Melancolía suave                                  |";
-        qstesc1opc1[5]="T–S–T–T–S–T–T                                     |";
-        qstesc1opc1[6]="La diferencia de altura entre dos notas           |";
-        qstesc1opc1[7]="Un tono completo                                  |";
-        qstesc1opc1[8]="La intensidad del volumen                         |";
-        qstesc1opc1[9]="De acordes secundarios                            |";
-        qstesc1opc2[0]="Un conjunto de acordes al azar                    |";//opcion 2
-        qstesc1opc2[1]="Do, Re, Mi, Fa, Sol, La, Si                       |";
-        qstesc1opc2[2]="Semitono                                          |";
-        qstesc1opc2[3]="T–S–T–T–T–S–T                                     |";
-        qstesc1opc2[4]="Tensiones oscuras                                 |";
-        qstesc1opc2[5]="S–T–T–S–T–T–T                                     |";
-        qstesc1opc2[6]="Un ritmo repetitivo                               |";
-        qstesc1opc2[7]="Un intervalo aumentado                            |";
-        qstesc1opc2[8]="Una nota sin función                              |";
-        qstesc1opc2[9]="De la escala de Sol mayor                         |";
-        qstesc1opc3[0]="Una secuencia de ritmos ordenados                 |";//opcion 3
-        qstesc1opc3[1]="Las notas armónicas superiores                    |";
-        qstesc1opc3[2]="Intervalo compuesto                               |";
-        qstesc1opc3[3]="S–T–T–S–T–T–T                                     |";
-        qstesc1opc3[4]="Alegría y brillo                                  |";
-        qstesc1opc3[5]="T–T–S–T–T–S–T                                     |";
-        qstesc1opc3[6]="La duración del sonido                            |";
-        qstesc1opc3[7]="Un semitono                                       |";
-        qstesc1opc3[8]="Una variación sin estructura                      |";
-        qstesc1opc3[9]="De notas aumentadas                               |";
-        qstesc1opc4[0]="Una forma rítmica                                 |";//opcion 4
-        qstesc1opc4[1]="Solo Do y Sol                                     |";
-        qstesc1opc4[2]="Frase melódica                                    |";
-        qstesc1opc4[3]="T–T–T–S–T–S–T                                     |";
-        qstesc1opc4[4]="Complejidad armónica                              |";
-        qstesc1opc4[5]="S–S–T–T–T–S–T                                     |";
-        qstesc1opc4[6]="Un tipo de compás                                 |";
-        qstesc1opc4[7]="Un intervalo disminuido                           |";
-        qstesc1opc4[8]="Es el “hogar” sonoro de la música                 |";
-        qstesc1opc4[9]="De la escala de Do mayor                          |";
+        qstesc1[0] = "¿Qué característica define a una escala musical?    |";//asignacion para las preguntas
+        qstesc1[1] = "Notas bases de las escalas en la música occidental  |";//para el formato de cuadro llena 52 espacios y "|"
+        qstesc1[2] = "Distancia mínima entre dos notas consecutivas       |";
+        qstesc1[3] = "Patrón de tonos y semitonos de la escala mayor      |";
+        qstesc1[4] = "Tipo de emociones suele transmitir la escala mayor  |";
+        qstesc1[5] = "Patrón define a la escala menor natural             |";
+        qstesc1[6] = "¿Qué es un intervalo musical?                       |";
+        qstesc1[7] = "¿Qué tipo de intervalo se encuentra entre Mi–Fa?    |";
+        qstesc1[8] = "¿Qué papel tiene la tonalidad en una pieza musical? |";
+        qstesc1[9] = "¿De dónde son los acordes principales de Do mayor? |";
+        qstesc1opc1[0] = "Un conjunto de notas organizadas por intervalos   |";//opcion 1
+        qstesc1opc1[1] = "Las doce notas cromáticas                         |";//para el formato de cuadro llena 51 espacios y "|"
+        qstesc1opc1[2] = "Tono                                              |";
+        qstesc1opc1[3] = "T–T–S–T–T–T–S                                     |";
+        qstesc1opc1[4] = "Melancolía suave                                  |";
+        qstesc1opc1[5] = "T–S–T–T–S–T–T                                     |";
+        qstesc1opc1[6] = "La diferencia de altura entre dos notas           |";
+        qstesc1opc1[7] = "Un tono completo                                  |";
+        qstesc1opc1[8] = "La intensidad del volumen                         |";
+        qstesc1opc1[9] = "De acordes secundarios                            |";
+        qstesc1opc2[0] = "Un conjunto de acordes al azar                    |";//opcion 2
+        qstesc1opc2[1] = "Do, Re, Mi, Fa, Sol, La, Si                       |";
+        qstesc1opc2[2] = "Semitono                                          |";
+        qstesc1opc2[3] = "T–S–T–T–T–S–T                                     |";
+        qstesc1opc2[4] = "Tensiones oscuras                                 |";
+        qstesc1opc2[5] = "S–T–T–S–T–T–T                                     |";
+        qstesc1opc2[6] = "Un ritmo repetitivo                               |";
+        qstesc1opc2[7] = "Un intervalo aumentado                            |";
+        qstesc1opc2[8] = "Una nota sin función                              |";
+        qstesc1opc2[9] = "De la escala de Sol mayor                         |";
+        qstesc1opc3[0] = "Una secuencia de ritmos ordenados                 |";//opcion 3
+        qstesc1opc3[1] = "Las notas armónicas superiores                    |";
+        qstesc1opc3[2] = "Intervalo compuesto                               |";
+        qstesc1opc3[3] = "S–T–T–S–T–T–T                                     |";
+        qstesc1opc3[4] = "Alegría y brillo                                  |";
+        qstesc1opc3[5] = "T–T–S–T–T–S–T                                     |";
+        qstesc1opc3[6] = "La duración del sonido                            |";
+        qstesc1opc3[7] = "Un semitono                                       |";
+        qstesc1opc3[8] = "Una variación sin estructura                      |";
+        qstesc1opc3[9] = "De notas aumentadas                               |";
+        qstesc1opc4[0] = "Una forma rítmica                                 |";//opcion 4
+        qstesc1opc4[1] = "Solo Do y Sol                                     |";
+        qstesc1opc4[2] = "Frase melódica                                    |";
+        qstesc1opc4[3] = "T–T–T–S–T–S–T                                     |";
+        qstesc1opc4[4] = "Complejidad armónica                              |";
+        qstesc1opc4[5] = "S–S–T–T–T–S–T                                     |";
+        qstesc1opc4[6] = "Un tipo de compás                                 |";
+        qstesc1opc4[7] = "Un intervalo disminuido                           |";
+        qstesc1opc4[8] = "Es el “hogar” sonoro de la música                 |";
+        qstesc1opc4[9] = "De la escala de Do mayor                          |";
         int[] respuestasCorrectas = {1, 2, 2, 1, 3, 1, 1, 3, 4, 4};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstesc1[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1019,11 +1131,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1033,41 +1145,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     private static void ritmo2() {
         screen();//aqui se modifica el tema y subtema del ritmo 2
         System.out.println("        |                                                                    |");
@@ -1079,10 +1192,12 @@ public class DJPython {
         System.out.println("        |                     y en experiencias culturales                   |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: ritmo2_1();
+        switch (userqstint) {
+            case 1:
+                ritmo2_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1091,69 +1206,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void ritmo2_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstrit2 = new String[10];
         qstrit2opc1 = new String[10];
         qstrit2opc2 = new String[10];
         qstrit2opc3 = new String[10];
         qstrit2opc4 = new String[10];
-        qstrit2[0]= "Qué distingue al ritmo de otros elementos musicales?|";//asignacion para las preguntas
-        qstrit2[1]= "¿Qué aportaban los tambores rituales?               |";//para el formato de cuadro llena 52 espacios y "|"
-        qstrit2[2]= "Qué muestra que el ritmo influye antes del lenguaje?|";
-        qstrit2[3]= "¿Qué región detecta y predice el pulso?             |";
-        qstrit2[4]= "¿Qué intervalo hay entre Si y Do?                   |";
-        qstrit2[5]= "¿Qué aporta el cerebelo?                            |";
-        qstrit2[6]= "¿Qué herramienta rítmica usan los políticos?        |";
-        qstrit2[7]= "¿Cómo afecta el ritmo en películas?                 |";
-        qstrit2[8]= "¿Qué permite la coordinación cerebral?              |";
-        qstrit2[9]= "¿Qué refleja la respuesta humana al ritmo?         |";
-        qstrit2opc1[0]="La organización temporal de sonidos               |";//opcion 1
-        qstrit2opc1[1]="Dar órdenes militares                             |";//para el formato de cuadro llena 51 espacios y "|"
-        qstrit2opc1[2]="La respuesta corporal del bebé                    |";
-        qstrit2opc1[3]="Ganglios basales                                  |";
-        qstrit2opc1[4]="Tono                                              |";
-        qstrit2opc1[5]="Coordinación motora                               |";
-        qstrit2opc1[6]="Pausas rítmicas                                   |";
-        qstrit2opc1[7]="Atenuación del sonido                             |";
-        qstrit2opc1[8]="Sincronización con estímulos                      |";
-        qstrit2opc1[9]="Que es parte de nuestra biología                  |";
-        qstrit2opc2[0]="La resonancia armónica                            |";//opcion 2
-        qstrit2opc2[1]="Unir a la comunidad                               |";
-        qstrit2opc2[2]="El desarrollo fonético                            |";
-        qstrit2opc2[3]="Hipotálamo                                        |";
-        qstrit2opc2[4]="Semitono                                          |";
-        qstrit2opc2[5]="Amplitud del sonido                               |";
-        qstrit2opc2[6]="Gritos enfáticos                                  |";
-        qstrit2opc2[7]="Desconexión auditiva                              |";
-        qstrit2opc2[8]="Inhibición sensorial                              |";
-        qstrit2opc2[9]="La necesidad del silencio                         |";
-        qstrit2opc3[0]="La afinación exacta                               |";//opcion 3
-        qstrit2opc3[1]="Organizar tareas matemáticas                      |";
-        qstrit2opc3[2]="La comprensión del habla                          |";
-        qstrit2opc3[3]="Cerebelo                                          |";
-        qstrit2opc3[4]="Tercera mayor                                     |";
-        qstrit2opc3[5]="Control del volumen                               |";
-        qstrit2opc3[6]="Ausencia de pausas                                |";
-        qstrit2opc3[7]="Pérdida de compás                                 |";
-        qstrit2opc3[8]="Aceleración cardíaca                              |";
-        qstrit2opc3[9]="Formación cultural                                |";
-        qstrit2opc4[0]="La vibración del aire                             |";//opcion 4
-        qstrit2opc4[1]="Manipular emociones mediante imágenes             |";
-        qstrit2opc4[2]="La memoria episódica                              |";
-        qstrit2opc4[3]="Corteza occipital                                 |";
-        qstrit2opc4[4]="Quinta justa                                      |";
-        qstrit2opc4[5]="Cambios hormonales                                |";
-        qstrit2opc4[6]="Movimientos sin ritmo                             |";
-        qstrit2opc4[7]="Mayor tensión emocional                           |";
-        qstrit2opc4[8]="Descoordinación muscular                          |";
-        qstrit2opc4[9]="La lógica musical avanzada                        |";
+        qstrit2[0] = "Qué distingue al ritmo de otros elementos musicales?|";//asignacion para las preguntas
+        qstrit2[1] = "¿Qué aportaban los tambores rituales?               |";//para el formato de cuadro llena 52 espacios y "|"
+        qstrit2[2] = "Qué muestra que el ritmo influye antes del lenguaje?|";
+        qstrit2[3] = "¿Qué región detecta y predice el pulso?             |";
+        qstrit2[4] = "¿Qué intervalo hay entre Si y Do?                   |";
+        qstrit2[5] = "¿Qué aporta el cerebelo?                            |";
+        qstrit2[6] = "¿Qué herramienta rítmica usan los políticos?        |";
+        qstrit2[7] = "¿Cómo afecta el ritmo en películas?                 |";
+        qstrit2[8] = "¿Qué permite la coordinación cerebral?              |";
+        qstrit2[9] = "¿Qué refleja la respuesta humana al ritmo?         |";
+        qstrit2opc1[0] = "La organización temporal de sonidos               |";//opcion 1
+        qstrit2opc1[1] = "Dar órdenes militares                             |";//para el formato de cuadro llena 51 espacios y "|"
+        qstrit2opc1[2] = "La respuesta corporal del bebé                    |";
+        qstrit2opc1[3] = "Ganglios basales                                  |";
+        qstrit2opc1[4] = "Tono                                              |";
+        qstrit2opc1[5] = "Coordinación motora                               |";
+        qstrit2opc1[6] = "Pausas rítmicas                                   |";
+        qstrit2opc1[7] = "Atenuación del sonido                             |";
+        qstrit2opc1[8] = "Sincronización con estímulos                      |";
+        qstrit2opc1[9] = "Que es parte de nuestra biología                  |";
+        qstrit2opc2[0] = "La resonancia armónica                            |";//opcion 2
+        qstrit2opc2[1] = "Unir a la comunidad                               |";
+        qstrit2opc2[2] = "El desarrollo fonético                            |";
+        qstrit2opc2[3] = "Hipotálamo                                        |";
+        qstrit2opc2[4] = "Semitono                                          |";
+        qstrit2opc2[5] = "Amplitud del sonido                               |";
+        qstrit2opc2[6] = "Gritos enfáticos                                  |";
+        qstrit2opc2[7] = "Desconexión auditiva                              |";
+        qstrit2opc2[8] = "Inhibición sensorial                              |";
+        qstrit2opc2[9] = "La necesidad del silencio                         |";
+        qstrit2opc3[0] = "La afinación exacta                               |";//opcion 3
+        qstrit2opc3[1] = "Organizar tareas matemáticas                      |";
+        qstrit2opc3[2] = "La comprensión del habla                          |";
+        qstrit2opc3[3] = "Cerebelo                                          |";
+        qstrit2opc3[4] = "Tercera mayor                                     |";
+        qstrit2opc3[5] = "Control del volumen                               |";
+        qstrit2opc3[6] = "Ausencia de pausas                                |";
+        qstrit2opc3[7] = "Pérdida de compás                                 |";
+        qstrit2opc3[8] = "Aceleración cardíaca                              |";
+        qstrit2opc3[9] = "Formación cultural                                |";
+        qstrit2opc4[0] = "La vibración del aire                             |";//opcion 4
+        qstrit2opc4[1] = "Manipular emociones mediante imágenes             |";
+        qstrit2opc4[2] = "La memoria episódica                              |";
+        qstrit2opc4[3] = "Corteza occipital                                 |";
+        qstrit2opc4[4] = "Quinta justa                                      |";
+        qstrit2opc4[5] = "Cambios hormonales                                |";
+        qstrit2opc4[6] = "Movimientos sin ritmo                             |";
+        qstrit2opc4[7] = "Mayor tensión emocional                           |";
+        qstrit2opc4[8] = "Descoordinación muscular                          |";
+        qstrit2opc4[9] = "La lógica musical avanzada                        |";
         int[] respuestasCorrectas = {1, 2, 1, 3, 2, 3, 1, 4, 1, 4};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstrit2[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1171,11 +1287,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1185,41 +1301,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     private static void ritmo1() {
         screen();//aqui se modifica el tema y subtema de ritmo 1
         System.out.println("        |                                                                    |");
@@ -1231,10 +1348,12 @@ public class DJPython {
         System.out.println("        |                           coordinación rítmica                     |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: ritmo1_1();
+        switch (userqstint) {
+            case 1:
+                ritmo1_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1243,70 +1362,71 @@ public class DJPython {
                 break;
         }
     }
+
     private static void ritmo1_1() {
 
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstrit1 = new String[10];
         qstrit1opc1 = new String[10];
         qstrit1opc2 = new String[10];
         qstrit1opc3 = new String[10];
         qstrit1opc4 = new String[10];
-        qstrit1[0]= "Permite organizar sonidos y silencios en patrones   |";//asignacion para las preguntas
-        qstrit1[1]= "Funciona como un “baterista interno”                |";//para el formato de cuadro llena 52 espacios y "|"
-        qstrit1[2]= "Ayuda a preparar el cuerpo para moverse al compás   |";
-        qstrit1[3]= "Función principal del cerebelo en el ritmo          |";
-        qstrit1[4]= "Ritmos que utilizaban las comunidades prehistóricas |";
-        qstrit1[5]= "Pasa cuando un bebé responde corporalmente al ritmo |";
-        qstrit1[6]= "Técnica que se utiliza para captar la atención      |";
-        qstrit1[7]= "Cómo contribuyen los ritmos en películas y canciones|";
-        qstrit1[8]= "¿Qué pasa cuando las áreas cerebrales se coordinan? |";
-        qstrit1[9]= "¿Qué demuestra que el ritmo es biológico?          |";
-        qstrit1opc1[0]="La velocidad del aire                             |";//opcion 1
-        qstrit1opc1[1]="Ganglios basales                                  |";//para el formato de cuadro llena 51 espacios y "|"
-        qstrit1opc1[2]="Hipocampo                                         |";
-        qstrit1opc1[3]="Mantener precisión en el movimiento               |";
-        qstrit1opc1[4]="Rituales de tambores                              |";
-        qstrit1opc1[5]="Sincronización corporal temprana                  |";
-        qstrit1opc1[6]="Pausas estratégicas                               |";
-        qstrit1opc1[7]="Generan intensidad emocional                      |";
-        qstrit1opc1[8]="Permiten sincronización con el entorno            |";
-        qstrit1opc1[9]="La respuesta espontánea al compás                 |";
-        qstrit1opc2[0]="La altura del sonido                              |";//opcion 2
-        qstrit1opc2[1]="Lóbulo occipital                                  |";
-        qstrit1opc2[2]="Córtex premotor                                   |";
-        qstrit1opc2[3]="Regular la respiración                            |";
-        qstrit1opc2[4]="Cantos agrícolas                                  |";
-        qstrit1opc2[5]="Aprendizaje verbal                                |";
-        qstrit1opc2[6]="Alargar las consonantes                           |";
-        qstrit1opc2[7]="Reducen tensión emocional                         |";
-        qstrit1opc2[8]="Suprimen movimientos automáticos                  |";
-        qstrit1opc2[9]="La necesidad del silencio absoluto                |";
-        qstrit1opc3[0]="La modulación tonal                               |";//opcion 3
-        qstrit1opc3[1]="Cerebelo                                          |";
-        qstrit1opc3[2]="Corteza auditiva primaria                         |";
-        qstrit1opc3[3]="Controlar el volumen del sonido                   |";
-        qstrit1opc3[4]="Códigos numéricos                                 |";
-        qstrit1opc3[5]="Razonamiento abstracto                            |";
-        qstrit1opc3[6]="Uso de repetición acústica                        |";
-        qstrit1opc3[7]="Eliminan estímulos visuales                       |";
-        qstrit1opc3[8]="Provocan desconexión sensorial                    |";
-        qstrit1opc3[9]="La organización de escalas musicales              |";
-        qstrit1opc4[0]="La organización temporal                          |";//opcion 4
-        qstrit1opc4[1]="Amígdala                                          |";
-        qstrit1opc4[2]="Lóbulo frontal orbito                             |";
-        qstrit1opc4[3]="Incrementar la el pulso                           |";
-        qstrit1opc4[4]="Señales de humo                                   |";
-        qstrit1opc4[5]="Imitación tardía                                  |";
-        qstrit1opc4[6]="Gesticular sin pausas                             |";
-        qstrit1opc4[7]="Distorsionan la afinación                         |";
-        qstrit1opc4[8]="Generan pérdida de coordinación                   |";
-        qstrit1opc4[9]="El pensamiento lógico                             |";
+        qstrit1[0] = "Permite organizar sonidos y silencios en patrones   |";//asignacion para las preguntas
+        qstrit1[1] = "Funciona como un “baterista interno”                |";//para el formato de cuadro llena 52 espacios y "|"
+        qstrit1[2] = "Ayuda a preparar el cuerpo para moverse al compás   |";
+        qstrit1[3] = "Función principal del cerebelo en el ritmo          |";
+        qstrit1[4] = "Ritmos que utilizaban las comunidades prehistóricas |";
+        qstrit1[5] = "Pasa cuando un bebé responde corporalmente al ritmo |";
+        qstrit1[6] = "Técnica que se utiliza para captar la atención      |";
+        qstrit1[7] = "Cómo contribuyen los ritmos en películas y canciones|";
+        qstrit1[8] = "¿Qué pasa cuando las áreas cerebrales se coordinan? |";
+        qstrit1[9] = "¿Qué demuestra que el ritmo es biológico?          |";
+        qstrit1opc1[0] = "La velocidad del aire                             |";//opcion 1
+        qstrit1opc1[1] = "Ganglios basales                                  |";//para el formato de cuadro llena 51 espacios y "|"
+        qstrit1opc1[2] = "Hipocampo                                         |";
+        qstrit1opc1[3] = "Mantener precisión en el movimiento               |";
+        qstrit1opc1[4] = "Rituales de tambores                              |";
+        qstrit1opc1[5] = "Sincronización corporal temprana                  |";
+        qstrit1opc1[6] = "Pausas estratégicas                               |";
+        qstrit1opc1[7] = "Generan intensidad emocional                      |";
+        qstrit1opc1[8] = "Permiten sincronización con el entorno            |";
+        qstrit1opc1[9] = "La respuesta espontánea al compás                 |";
+        qstrit1opc2[0] = "La altura del sonido                              |";//opcion 2
+        qstrit1opc2[1] = "Lóbulo occipital                                  |";
+        qstrit1opc2[2] = "Córtex premotor                                   |";
+        qstrit1opc2[3] = "Regular la respiración                            |";
+        qstrit1opc2[4] = "Cantos agrícolas                                  |";
+        qstrit1opc2[5] = "Aprendizaje verbal                                |";
+        qstrit1opc2[6] = "Alargar las consonantes                           |";
+        qstrit1opc2[7] = "Reducen tensión emocional                         |";
+        qstrit1opc2[8] = "Suprimen movimientos automáticos                  |";
+        qstrit1opc2[9] = "La necesidad del silencio absoluto                |";
+        qstrit1opc3[0] = "La modulación tonal                               |";//opcion 3
+        qstrit1opc3[1] = "Cerebelo                                          |";
+        qstrit1opc3[2] = "Corteza auditiva primaria                         |";
+        qstrit1opc3[3] = "Controlar el volumen del sonido                   |";
+        qstrit1opc3[4] = "Códigos numéricos                                 |";
+        qstrit1opc3[5] = "Razonamiento abstracto                            |";
+        qstrit1opc3[6] = "Uso de repetición acústica                        |";
+        qstrit1opc3[7] = "Eliminan estímulos visuales                       |";
+        qstrit1opc3[8] = "Provocan desconexión sensorial                    |";
+        qstrit1opc3[9] = "La organización de escalas musicales              |";
+        qstrit1opc4[0] = "La organización temporal                          |";//opcion 4
+        qstrit1opc4[1] = "Amígdala                                          |";
+        qstrit1opc4[2] = "Lóbulo frontal orbito                             |";
+        qstrit1opc4[3] = "Incrementar la el pulso                           |";
+        qstrit1opc4[4] = "Señales de humo                                   |";
+        qstrit1opc4[5] = "Imitación tardía                                  |";
+        qstrit1opc4[6] = "Gesticular sin pausas                             |";
+        qstrit1opc4[7] = "Distorsionan la afinación                         |";
+        qstrit1opc4[8] = "Generan pérdida de coordinación                   |";
+        qstrit1opc4[9] = "El pensamiento lógico                             |";
         int[] respuestasCorrectas = {4, 1, 2, 3, 1, 4, 2, 1, 4, 3};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstrit1[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1324,11 +1444,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1338,41 +1458,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     private static void melodia2() {
         screen();//aqui se modifica el tema y subtema del cuestionario2
         System.out.println("        |                                                                    |");
@@ -1383,10 +1504,12 @@ public class DJPython {
         System.out.println("        |       Subtema: Duración, altura, cualidad, textura e intensidad    |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: melodia2_1();
+        switch (userqstint) {
+            case 1:
+                melodia2_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1395,69 +1518,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void melodia2_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstmel2 = new String[10];
         qstmel2opc1 = new String[10];
         qstmel2opc2 = new String[10];
         qstmel2opc3 = new String[10];
         qstmel2opc4 = new String[10];
-        qstmel2[0]= "Determina cuanto dura un sonido en la melodía, es:  |";//asignacion para las preguntas
-        qstmel2[1]= "La altura diferencía entre sonidos:                 |";//para el formato de cuadro llena 52 espacios y "|"
-        qstmel2[2]= "La cualidad de la melodía se relaciona con:         |";
-        qstmel2[3]= "La intensidad expresa:                              |";
-        qstmel2[4]= "La textura melódica se refiere a:                   |";
-        qstmel2[5]= "La melodía con cambios muy marcados se percibe como:|";
-        qstmel2[6]= "La combinación de duración y altura produce:        |";
-        qstmel2[7]= "La cualidad sonora de una melodía puede cambiar por:|";
-        qstmel2[8]= "La textura monofónica implica:                      |";
-        qstmel2[9]= "La intensidad se interpreta mediante:              |";
-        qstmel2opc1[0]="Textura                                           |";//opcion 1
-        qstmel2opc1[1]="Graves y agudos                                   |";//para el formato de cuadro llena 51 espacios y "|"
-        qstmel2opc1[2]="El timbre y tipo de sonido                        |";
-        qstmel2opc1[3]="El tipo de escala usada                           |";
-        qstmel2opc1[4]="La forma de la partitura                          |";
-        qstmel2opc1[5]="Monótona                                          |";
-        qstmel2opc1[6]="Silencios rítmicos                                |";
-        qstmel2opc1[7]="Cambiar el tempo solo                             |";
-        qstmel2opc1[8]="Una línea melódica única                          |";
-        qstmel2opc1[9]="Figuras rítmicas                                  |";
-        qstmel2opc2[0]="Duración                                          |";//opcion 2
-        qstmel2opc2[1]="Lentos y rápidos                                  |";
-        qstmel2opc2[2]="El número de silencios                            |";
-        qstmel2opc2[3]="Si las notas son simultáneas                      |";
-        qstmel2opc2[4]="El color visual de una nota                       |";
-        qstmel2opc2[5]="Dinámica                                          |";
-        qstmel2opc2[6]="Un compás                                         |";
-        qstmel2opc2[7]="Cambiar el instrumento que la toca                |";
-        qstmel2opc2[8]="Varias melodías simultáneas                       |";
-        qstmel2opc2[9]="Armaduras                                         |";
-        qstmel2opc3[0]="Intensidad                                        |";//opcion 3
-        qstmel2opc3[1]="Suaves y fuertes                                  |";
-        qstmel2opc3[2]="El volúmen                                        |";
-        qstmel2opc3[3]="Que tan fuerte o suave es un sonido               |";
-        qstmel2opc3[4]="La afinación de un instrumento                    |";
-        qstmel2opc3[5]="Acordal                                           |";
-        qstmel2opc3[6]="Una progresión armónica                           |";
-        qstmel2opc3[7]="Cambiar la letra                                  |";
-        qstmel2opc3[8]="Acordes complejos                                 |";
-        qstmel2opc3[9]="Dinámicas (p,f,mf...)                             |";
-        qstmel2opc4[0]="Cualidad                                          |";//opcion 4
-        qstmel2opc4[1]="Cortos y largos                                   |";
-        qstmel2opc4[2]="La rapidéz                                        |";
-        qstmel2opc4[3]="La velocidad del ritmo                            |";
-        qstmel2opc4[4]="Como se combinan líneas musicales                 |";
-        qstmel2opc4[5]="Estática                                          |";
-        qstmel2opc4[6]="La forma melódica                                 |";
-        qstmel2opc4[7]="Eliminar variación de altura                      |";
-        qstmel2opc4[8]="Efectos electrónicos                              |";
-        qstmel2opc4[9]="Matices de tempo                                  |";
+        qstmel2[0] = "Determina cuanto dura un sonido en la melodía, es:  |";//asignacion para las preguntas
+        qstmel2[1] = "La altura diferencía entre sonidos:                 |";//para el formato de cuadro llena 52 espacios y "|"
+        qstmel2[2] = "La cualidad de la melodía se relaciona con:         |";
+        qstmel2[3] = "La intensidad expresa:                              |";
+        qstmel2[4] = "La textura melódica se refiere a:                   |";
+        qstmel2[5] = "La melodía con cambios muy marcados se percibe como:|";
+        qstmel2[6] = "La combinación de duración y altura produce:        |";
+        qstmel2[7] = "La cualidad sonora de una melodía puede cambiar por:|";
+        qstmel2[8] = "La textura monofónica implica:                      |";
+        qstmel2[9] = "La intensidad se interpreta mediante:              |";
+        qstmel2opc1[0] = "Textura                                           |";//opcion 1
+        qstmel2opc1[1] = "Graves y agudos                                   |";//para el formato de cuadro llena 51 espacios y "|"
+        qstmel2opc1[2] = "El timbre y tipo de sonido                        |";
+        qstmel2opc1[3] = "El tipo de escala usada                           |";
+        qstmel2opc1[4] = "La forma de la partitura                          |";
+        qstmel2opc1[5] = "Monótona                                          |";
+        qstmel2opc1[6] = "Silencios rítmicos                                |";
+        qstmel2opc1[7] = "Cambiar el tempo solo                             |";
+        qstmel2opc1[8] = "Una línea melódica única                          |";
+        qstmel2opc1[9] = "Figuras rítmicas                                  |";
+        qstmel2opc2[0] = "Duración                                          |";//opcion 2
+        qstmel2opc2[1] = "Lentos y rápidos                                  |";
+        qstmel2opc2[2] = "El número de silencios                            |";
+        qstmel2opc2[3] = "Si las notas son simultáneas                      |";
+        qstmel2opc2[4] = "El color visual de una nota                       |";
+        qstmel2opc2[5] = "Dinámica                                          |";
+        qstmel2opc2[6] = "Un compás                                         |";
+        qstmel2opc2[7] = "Cambiar el instrumento que la toca                |";
+        qstmel2opc2[8] = "Varias melodías simultáneas                       |";
+        qstmel2opc2[9] = "Armaduras                                         |";
+        qstmel2opc3[0] = "Intensidad                                        |";//opcion 3
+        qstmel2opc3[1] = "Suaves y fuertes                                  |";
+        qstmel2opc3[2] = "El volúmen                                        |";
+        qstmel2opc3[3] = "Que tan fuerte o suave es un sonido               |";
+        qstmel2opc3[4] = "La afinación de un instrumento                    |";
+        qstmel2opc3[5] = "Acordal                                           |";
+        qstmel2opc3[6] = "Una progresión armónica                           |";
+        qstmel2opc3[7] = "Cambiar la letra                                  |";
+        qstmel2opc3[8] = "Acordes complejos                                 |";
+        qstmel2opc3[9] = "Dinámicas (p,f,mf...)                             |";
+        qstmel2opc4[0] = "Cualidad                                          |";//opcion 4
+        qstmel2opc4[1] = "Cortos y largos                                   |";
+        qstmel2opc4[2] = "La rapidéz                                        |";
+        qstmel2opc4[3] = "La velocidad del ritmo                            |";
+        qstmel2opc4[4] = "Como se combinan líneas musicales                 |";
+        qstmel2opc4[5] = "Estática                                          |";
+        qstmel2opc4[6] = "La forma melódica                                 |";
+        qstmel2opc4[7] = "Eliminar variación de altura                      |";
+        qstmel2opc4[8] = "Efectos electrónicos                              |";
+        qstmel2opc4[9] = "Matices de tempo                                  |";
         int[] respuestasCorrectas = {2, 1, 1, 3, 4, 2, 4, 2, 1, 3};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstmel2[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1475,11 +1599,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1489,41 +1613,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     private static void melodia1() {
         screen();//aqui se modifica el tema y subtema del cuestionario de melodia1
         System.out.println("        |                                                                    |");
@@ -1534,10 +1659,12 @@ public class DJPython {
         System.out.println("        |          Subtema: Definición, características y percepción         |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: melodia1_1();
+        switch (userqstint) {
+            case 1:
+                melodia1_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1546,69 +1673,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void melodia1_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstmel1 = new String[10];
         qstmel1opc1 = new String[10];
         qstmel1opc2 = new String[10];
         qstmel1opc3 = new String[10];
         qstmel1opc4 = new String[10];
-        qstmel1[0]= "La melodía se define como:                          |";//asignacion para las preguntas
-        qstmel1[1]= "La melodía se considera una entidad cuando:         |";//para el formato de cuadro llena 52 espacios y "|"
-        qstmel1[2]= "Diferencia clave entre melodía y acorde:            |";
-        qstmel1[3]= "Para que exista melodía debe haber:                 |";
-        qstmel1[4]= "un \"motivo\" es:                                     |";
-        qstmel1[5]= "Las melodías suelen organizarse en:                 |";
-        qstmel1[6]= "La música occidental se basa en una escala de:      |";
-        qstmel1[7]= "El elemento que define la altura de los sonidos es: |";
-        qstmel1[8]= "Las melodías pueden describirse como:               |";
-        qstmel1[9]= "La melodía es generalmente:                        |";
-        qstmel1opc1[0]="Sonidos simultáneos                               |";//opcion 1
-        qstmel1opc1[1]="No presenta ningún cambio                         |";//para el formato de cuadro llena 51 espacios y "|"
-        qstmel1opc1[2]="Es simultánea                                     |";
-        qstmel1opc1[3]="Cambios perceptibles                              |";
-        qstmel1opc1[4]="Otra palabra para armonía                         |";
-        qstmel1opc1[5]="Frases musicales                                  |";
-        qstmel1opc1[6]="6 tonos                                           |";
-        qstmel1opc1[7]="Duración                                          |";
-        qstmel1opc1[8]="Líneas sonoras                                    |";
-        qstmel1opc1[9]="El acompañamiento                                 |";
-        qstmel1opc2[0]="Una sucesión de sonidos graves y agudos           |";//opcion 2
-        qstmel1opc2[1]="Solo usa sonidos graves                           |";
-        qstmel1opc2[2]="No contiene ritmo                                 |";
-        qstmel1opc2[3]="Intensidad constante                              |";
-        qstmel1opc2[4]="Un patrón corto que puede repetirse               |";
-        qstmel1opc2[5]="Capítulos                                         |";
-        qstmel1opc2[6]="8 tonos                                           |";
-        qstmel1opc2[7]="Intensidad                                        |";
-        qstmel1opc2[8]="Acordes compuestos                                |";
-        qstmel1opc2[9]="La idea musical principal                         |";
-        qstmel1opc3[0]="Un conjunto de acordes                            |";//opcion 3
-        qstmel1opc3[1]="Sus sonidos se perciben somo una unidad           |";
-        qstmel1opc3[2]="Es sucesiva                                       |";
-        qstmel1opc3[3]="Silencio total                                    |";
-        qstmel1opc3[4]="Un tipo de acorde                                 |";
-        qstmel1opc3[5]="Tonos simultáneos                                 |";
-        qstmel1opc3[6]="10 tonos                                          |";
-        qstmel1opc3[7]="Timbre                                            |";
-        qstmel1opc3[8]="Texturas estáticas                                |";
-        qstmel1opc3[9]="Un ruido de fondo                                 |";
-        qstmel1opc4[0]="Un ritmo constante                                |";//opcion 4
-        qstmel1opc4[1]="Es idéntica a la armonía                          |";
-        qstmel1opc4[2]="Siempre es aguda                                  |";
-        qstmel1opc4[3]="Solo sonidos iguales                              |";
-        qstmel1opc4[4]="Una escala completa                               |";
-        qstmel1opc4[5]="Vibraciones                                       |";
-        qstmel1opc4[6]="12 tonos                                          |";
-        qstmel1opc4[7]="Frecuencia                                        |";
-        qstmel1opc4[8]="Ritmos planos                                     |";
-        qstmel1opc4[9]="Un conjunto de silencio                           |";
+        qstmel1[0] = "La melodía se define como:                          |";//asignacion para las preguntas
+        qstmel1[1] = "La melodía se considera una entidad cuando:         |";//para el formato de cuadro llena 52 espacios y "|"
+        qstmel1[2] = "Diferencia clave entre melodía y acorde:            |";
+        qstmel1[3] = "Para que exista melodía debe haber:                 |";
+        qstmel1[4] = "un \"motivo\" es:                                     |";
+        qstmel1[5] = "Las melodías suelen organizarse en:                 |";
+        qstmel1[6] = "La música occidental se basa en una escala de:      |";
+        qstmel1[7] = "El elemento que define la altura de los sonidos es: |";
+        qstmel1[8] = "Las melodías pueden describirse como:               |";
+        qstmel1[9] = "La melodía es generalmente:                        |";
+        qstmel1opc1[0] = "Sonidos simultáneos                               |";//opcion 1
+        qstmel1opc1[1] = "No presenta ningún cambio                         |";//para el formato de cuadro llena 51 espacios y "|"
+        qstmel1opc1[2] = "Es simultánea                                     |";
+        qstmel1opc1[3] = "Cambios perceptibles                              |";
+        qstmel1opc1[4] = "Otra palabra para armonía                         |";
+        qstmel1opc1[5] = "Frases musicales                                  |";
+        qstmel1opc1[6] = "6 tonos                                           |";
+        qstmel1opc1[7] = "Duración                                          |";
+        qstmel1opc1[8] = "Líneas sonoras                                    |";
+        qstmel1opc1[9] = "El acompañamiento                                 |";
+        qstmel1opc2[0] = "Una sucesión de sonidos graves y agudos           |";//opcion 2
+        qstmel1opc2[1] = "Solo usa sonidos graves                           |";
+        qstmel1opc2[2] = "No contiene ritmo                                 |";
+        qstmel1opc2[3] = "Intensidad constante                              |";
+        qstmel1opc2[4] = "Un patrón corto que puede repetirse               |";
+        qstmel1opc2[5] = "Capítulos                                         |";
+        qstmel1opc2[6] = "8 tonos                                           |";
+        qstmel1opc2[7] = "Intensidad                                        |";
+        qstmel1opc2[8] = "Acordes compuestos                                |";
+        qstmel1opc2[9] = "La idea musical principal                         |";
+        qstmel1opc3[0] = "Un conjunto de acordes                            |";//opcion 3
+        qstmel1opc3[1] = "Sus sonidos se perciben somo una unidad           |";
+        qstmel1opc3[2] = "Es sucesiva                                       |";
+        qstmel1opc3[3] = "Silencio total                                    |";
+        qstmel1opc3[4] = "Un tipo de acorde                                 |";
+        qstmel1opc3[5] = "Tonos simultáneos                                 |";
+        qstmel1opc3[6] = "10 tonos                                          |";
+        qstmel1opc3[7] = "Timbre                                            |";
+        qstmel1opc3[8] = "Texturas estáticas                                |";
+        qstmel1opc3[9] = "Un ruido de fondo                                 |";
+        qstmel1opc4[0] = "Un ritmo constante                                |";//opcion 4
+        qstmel1opc4[1] = "Es idéntica a la armonía                          |";
+        qstmel1opc4[2] = "Siempre es aguda                                  |";
+        qstmel1opc4[3] = "Solo sonidos iguales                              |";
+        qstmel1opc4[4] = "Una escala completa                               |";
+        qstmel1opc4[5] = "Vibraciones                                       |";
+        qstmel1opc4[6] = "12 tonos                                          |";
+        qstmel1opc4[7] = "Frecuencia                                        |";
+        qstmel1opc4[8] = "Ritmos planos                                     |";
+        qstmel1opc4[9] = "Un conjunto de silencio                           |";
         int[] respuestasCorrectas = {2, 3, 3, 1, 2, 1, 4, 4, 1, 2};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstmel1[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1626,11 +1754,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1640,42 +1768,43 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
-    private static void armonia2(){
+
+    private static void armonia2() {
         screen();//aqui se modifica el tema y subtema del cuestionario
         System.out.println("        |                                                                    |");
         System.out.println("        |                        Cuestionario Armonia 2                      |");
@@ -1686,10 +1815,12 @@ public class DJPython {
 
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: armonia2_1();
+        switch (userqstint) {
+            case 1:
+                armonia2_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1698,69 +1829,70 @@ public class DJPython {
                 break;
         }
     }
+
     private static void armonia2_1() {
-        aciertos=0;
-        errores=0;
+        aciertos = 0;
+        errores = 0;
         qstarm2 = new String[10];
         qstarm2opc1 = new String[10];
         qstarm2opc2 = new String[10];
         qstarm2opc3 = new String[10];
         qstarm2opc4 = new String[10];
-        qstarm2[0]= "Un intervalo es:                                    |";//asignacion para las preguntas
-        qstarm2[1]= "Un acorde está formado principalmente por:          |";//para el formato de cuadro llena 52 espacios y "|"
-        qstarm2[2]= "Una progresión armónica consiste en:                |";
-        qstarm2[3]= "Una característica de los acordes consonantes es:   |";
-        qstarm2[4]= "Una característica de los acordes disonantes es:    |";
-        qstarm2[5]= "El acorde dominante tiende a:                       |";
-        qstarm2[6]= "La función armónica relaciona:                      |";
-        qstarm2[7]= "Una progresión típica de música popular es:         |";
-        qstarm2[8]= "El intervalo de tercera mayor se considera:         |";
-        qstarm2[9]= "Un acorde menor se forma con:                      |";
-        qstarm2opc1[0]="La diferencia de altura entre dos notas           |";//opcion 1
-        qstarm2opc1[1]="Una nota sola                                     |";//para el formato de cuadro llena 51 espacios y "|"
-        qstarm2opc1[2]="Un cambio de tonalidad                            |";
-        qstarm2opc1[3]="Genera tensión                                    |";
-        qstarm2opc1[4]="Producen estabilidad                              |";
-        qstarm2opc1[5]="Mantener el reposo                                |";
-        qstarm2opc1[6]="La velocidad del compás                           |";
-        qstarm2opc1[7]="I–IV–V–I                                          |";
-        qstarm2opc1[8]="Consonante                                        |";
-        qstarm2opc1[9]="Tercera mayor + quinta justa                      |";
-        qstarm2opc2[0]="Un acorde invertido                               |";//opcion 2
-        qstarm2opc2[1]="Dos notas consecutivas                            |";
-        qstarm2opc2[2]="La repetición de una misma nota                   |";
-        qstarm2opc2[3]="Producen sensación de reposo                      |";
-        qstarm2opc2[4]="Se perciben como \"suaves\"                         |";
-        qstarm2opc2[5]="Resolver hacia la tónica                          |";
-        qstarm2opc2[6]="Los instrumentos usados                           |";
-        qstarm2opc2[7]="VI–II–III–I                                       |";
-        qstarm2opc2[8]="Disonante                                         |";
-        qstarm2opc2[9]="Segunda mayor + quinta justa                      |";
-        qstarm2opc3[0]="Un cambio de compás                               |";//opcion 3
-        qstarm2opc3[1]="Silencios prolongados                             |";
-        qstarm2opc3[2]="El cambio de ritmo                                |";
-        qstarm2opc3[3]="Son rítmicos                                      |";
-        qstarm2opc3[4]="Generan tensión que pide resolución               |";
-        qstarm2opc3[5]="Detener la progresión                             |";
-        qstarm2opc3[6]="Los acordes dentro de una tonalidad               |";
-        qstarm2opc3[7]="V-V-V-V                                           |";
-        qstarm2opc3[8]="Atonal                                            |";
-        qstarm2opc3[9]="Tercera menor + quinta justa                      |";
-        qstarm2opc4[0]="Una melodía corta                                 |";//opcion 4
-        qstarm2opc4[1]="Tres o más notas simultáneas                      |";
-        qstarm2opc4[2]="Una serie ordenada de acordes                     |";
-        qstarm2opc4[3]="Son siempre llanos                                |";
-        qstarm2opc4[4]="Son siempre acordes mayores                       |";
-        qstarm2opc4[5]="Cambiar la métrica                                |";
-        qstarm2opc4[6]="El tipo de timbre                                 |";
-        qstarm2opc4[7]="I–II–I–II                                         |";
-        qstarm2opc4[8]="Rítmico                                           |";
-        qstarm2opc4[9]="Tercera menor + quinta disminuida                 |";
+        qstarm2[0] = "Un intervalo es:                                    |";//asignacion para las preguntas
+        qstarm2[1] = "Un acorde está formado principalmente por:          |";//para el formato de cuadro llena 52 espacios y "|"
+        qstarm2[2] = "Una progresión armónica consiste en:                |";
+        qstarm2[3] = "Una característica de los acordes consonantes es:   |";
+        qstarm2[4] = "Una característica de los acordes disonantes es:    |";
+        qstarm2[5] = "El acorde dominante tiende a:                       |";
+        qstarm2[6] = "La función armónica relaciona:                      |";
+        qstarm2[7] = "Una progresión típica de música popular es:         |";
+        qstarm2[8] = "El intervalo de tercera mayor se considera:         |";
+        qstarm2[9] = "Un acorde menor se forma con:                      |";
+        qstarm2opc1[0] = "La diferencia de altura entre dos notas           |";//opcion 1
+        qstarm2opc1[1] = "Una nota sola                                     |";//para el formato de cuadro llena 51 espacios y "|"
+        qstarm2opc1[2] = "Un cambio de tonalidad                            |";
+        qstarm2opc1[3] = "Genera tensión                                    |";
+        qstarm2opc1[4] = "Producen estabilidad                              |";
+        qstarm2opc1[5] = "Mantener el reposo                                |";
+        qstarm2opc1[6] = "La velocidad del compás                           |";
+        qstarm2opc1[7] = "I–IV–V–I                                          |";
+        qstarm2opc1[8] = "Consonante                                        |";
+        qstarm2opc1[9] = "Tercera mayor + quinta justa                      |";
+        qstarm2opc2[0] = "Un acorde invertido                               |";//opcion 2
+        qstarm2opc2[1] = "Dos notas consecutivas                            |";
+        qstarm2opc2[2] = "La repetición de una misma nota                   |";
+        qstarm2opc2[3] = "Producen sensación de reposo                      |";
+        qstarm2opc2[4] = "Se perciben como \"suaves\"                         |";
+        qstarm2opc2[5] = "Resolver hacia la tónica                          |";
+        qstarm2opc2[6] = "Los instrumentos usados                           |";
+        qstarm2opc2[7] = "VI–II–III–I                                       |";
+        qstarm2opc2[8] = "Disonante                                         |";
+        qstarm2opc2[9] = "Segunda mayor + quinta justa                      |";
+        qstarm2opc3[0] = "Un cambio de compás                               |";//opcion 3
+        qstarm2opc3[1] = "Silencios prolongados                             |";
+        qstarm2opc3[2] = "El cambio de ritmo                                |";
+        qstarm2opc3[3] = "Son rítmicos                                      |";
+        qstarm2opc3[4] = "Generan tensión que pide resolución               |";
+        qstarm2opc3[5] = "Detener la progresión                             |";
+        qstarm2opc3[6] = "Los acordes dentro de una tonalidad               |";
+        qstarm2opc3[7] = "V-V-V-V                                           |";
+        qstarm2opc3[8] = "Atonal                                            |";
+        qstarm2opc3[9] = "Tercera menor + quinta justa                      |";
+        qstarm2opc4[0] = "Una melodía corta                                 |";//opcion 4
+        qstarm2opc4[1] = "Tres o más notas simultáneas                      |";
+        qstarm2opc4[2] = "Una serie ordenada de acordes                     |";
+        qstarm2opc4[3] = "Son siempre llanos                                |";
+        qstarm2opc4[4] = "Son siempre acordes mayores                       |";
+        qstarm2opc4[5] = "Cambiar la métrica                                |";
+        qstarm2opc4[6] = "El tipo de timbre                                 |";
+        qstarm2opc4[7] = "I–II–I–II                                         |";
+        qstarm2opc4[8] = "Rítmico                                           |";
+        qstarm2opc4[9] = "Tercera menor + quinta disminuida                 |";
         int[] respuestasCorrectas = {1, 4, 4, 2, 3, 2, 3, 1, 1, 3};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstarm2[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1778,11 +1910,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1792,41 +1924,42 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     public static void armonia1() {
         screen();//aqui se modifica el tema y subtema del cuestionario
         System.out.println("        |                                                                    |");
@@ -1837,10 +1970,12 @@ public class DJPython {
         System.out.println("        |                 Subtema: Definiciones esenciales                   |");
         menucuestionarios();
         int userqstint = scanner.nextInt();
-        switch(userqstint){
-            case 1: armonia1_1();
+        switch (userqstint) {
+            case 1:
+                armonia1_1();
                 break;
-            case 2: cuestionarios();
+            case 2:
+                cuestionarios();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -1849,69 +1984,70 @@ public class DJPython {
                 break;
         }
     }
-    public static void armonia1_1(){
-        aciertos=0;
-        errores=0;
+
+    public static void armonia1_1() {
+        aciertos = 0;
+        errores = 0;
         qstarm1 = new String[10];
         qstarm1opc1 = new String[10];
         qstarm1opc2 = new String[10];
         qstarm1opc3 = new String[10];
         qstarm1opc4 = new String[10];
-        qstarm1[0]= "¿Qué es la armonía musical?                         |";//asignacion para las preguntas
-        qstarm1[1]= "¿Qué aspecto genera tensión y resolución en música? |";//para el formato de cuadro llena 52 espacios y "|"
-        qstarm1[2]= "¿Cómo se llama la estabilidad en un acorde?         |";
-        qstarm1[3]= "¿Qué es una disonancia?                             |";
-        qstarm1[4]= "El término \"armonía\" proviene del griego y significa|";
-        qstarm1[5]= "¿Cuál es el verbo griego del que deriva “armonía”?  |";
-        qstarm1[6]= "La armonía aporta principalmente:                   |";
-        qstarm1[7]= "¿Cuál de los siguientes NO es un elemento básico?   |";
-        qstarm1[8]= "¿Qué se encarga de medir el paso de los acordes?    |";
-        qstarm1[9]= "Los acordes se forman principalmente con:          |";
-        qstarm1opc1[0]="La velocidad de una pieza musical                 |";//opcion 1
-        qstarm1opc1[1]="El tempo                                          |";//para el formato de cuadro llena 51 espacios y "|"
-        qstarm1opc1[2]="Disonancia                                        |";
-        qstarm1opc1[3]="Un intervalo inestable                            |";
-        qstarm1opc1[4]="Fuerza o energía                                  |";
-        qstarm1opc1[5]="Harmaino                                          |";
-        qstarm1opc1[6]="Silencio y pausas                                 |";
-        qstarm1opc1[7]="Intervalos                                        |";
-        qstarm1opc1[8]="Ritmo armónico                                    |";
-        qstarm1opc1[9]="Notas simultáneas                                 |";
-        qstarm1opc2[0]="Notas simultáneas formando acordes                |";//opcion 2
-        qstarm1opc2[1]="La melodía                                        |";
-        qstarm1opc2[2]="Tonalidad                                         |";
-        qstarm1opc2[3]="Un ritmo lento                                    |";
-        qstarm1opc2[4]="Conjunto, acuerdo, concordia                      |";
-        qstarm1opc2[5]="Harmozo                                           |";
-        qstarm1opc2[6]="Ruido y tensión                                   |";
-        qstarm1opc2[7]="Acordes                                           |";
-        qstarm1opc2[8]="Melodía                                           |";
-        qstarm1opc2[9]="Ritmos repetitivos                                |";
-        qstarm1opc3[0]="El timbre de un instrumento                       |";//opcion 3
-        qstarm1opc3[1]="La armonía                                        |";
-        qstarm1opc3[2]="Consonancia                                       |";
-        qstarm1opc3[3]="Una melodía suave                                 |";
-        qstarm1opc3[4]="Ruido o caos                                      |";
-        qstarm1opc3[5]="Harmoto                                           |";
-        qstarm1opc3[6]="Más velocidad                                     |";
-        qstarm1opc3[7]="Compás de 4/4                                     |";
-        qstarm1opc3[8]="Tempo                                             |";
-        qstarm1opc3[9]="Melodías rápidas                                  |";
-        qstarm1opc4[0]="La organización de ritmos                         |";//opcion 4
-        qstarm1opc4[1]="El compás                                         |";
-        qstarm1opc4[2]="Modulación                                        |";
-        qstarm1opc4[3]="Un sonido que genera tensión                      |";
-        qstarm1opc4[4]="Movimiento o cambio                               |";
-        qstarm1opc4[5]="Harmenein                                         |";
-        qstarm1opc4[6]="Estructura, color emocional y soporte a la melodía|";
-        qstarm1opc4[7]="Tonalidad                                         |";
-        qstarm1opc4[8]="Timbre                                            |";
-        qstarm1opc4[9]="Escalas mayores únicamente                        |";
+        qstarm1[0] = "¿Qué es la armonía musical?                         |";//asignacion para las preguntas
+        qstarm1[1] = "¿Qué aspecto genera tensión y resolución en música? |";//para el formato de cuadro llena 52 espacios y "|"
+        qstarm1[2] = "¿Cómo se llama la estabilidad en un acorde?         |";
+        qstarm1[3] = "¿Qué es una disonancia?                             |";
+        qstarm1[4] = "El término \"armonía\" proviene del griego y significa|";
+        qstarm1[5] = "¿Cuál es el verbo griego del que deriva “armonía”?  |";
+        qstarm1[6] = "La armonía aporta principalmente:                   |";
+        qstarm1[7] = "¿Cuál de los siguientes NO es un elemento básico?   |";
+        qstarm1[8] = "¿Qué se encarga de medir el paso de los acordes?    |";
+        qstarm1[9] = "Los acordes se forman principalmente con:          |";
+        qstarm1opc1[0] = "La velocidad de una pieza musical                 |";//opcion 1
+        qstarm1opc1[1] = "El tempo                                          |";//para el formato de cuadro llena 51 espacios y "|"
+        qstarm1opc1[2] = "Disonancia                                        |";
+        qstarm1opc1[3] = "Un intervalo inestable                            |";
+        qstarm1opc1[4] = "Fuerza o energía                                  |";
+        qstarm1opc1[5] = "Harmaino                                          |";
+        qstarm1opc1[6] = "Silencio y pausas                                 |";
+        qstarm1opc1[7] = "Intervalos                                        |";
+        qstarm1opc1[8] = "Ritmo armónico                                    |";
+        qstarm1opc1[9] = "Notas simultáneas                                 |";
+        qstarm1opc2[0] = "Notas simultáneas formando acordes                |";//opcion 2
+        qstarm1opc2[1] = "La melodía                                        |";
+        qstarm1opc2[2] = "Tonalidad                                         |";
+        qstarm1opc2[3] = "Un ritmo lento                                    |";
+        qstarm1opc2[4] = "Conjunto, acuerdo, concordia                      |";
+        qstarm1opc2[5] = "Harmozo                                           |";
+        qstarm1opc2[6] = "Ruido y tensión                                   |";
+        qstarm1opc2[7] = "Acordes                                           |";
+        qstarm1opc2[8] = "Melodía                                           |";
+        qstarm1opc2[9] = "Ritmos repetitivos                                |";
+        qstarm1opc3[0] = "El timbre de un instrumento                       |";//opcion 3
+        qstarm1opc3[1] = "La armonía                                        |";
+        qstarm1opc3[2] = "Consonancia                                       |";
+        qstarm1opc3[3] = "Una melodía suave                                 |";
+        qstarm1opc3[4] = "Ruido o caos                                      |";
+        qstarm1opc3[5] = "Harmoto                                           |";
+        qstarm1opc3[6] = "Más velocidad                                     |";
+        qstarm1opc3[7] = "Compás de 4/4                                     |";
+        qstarm1opc3[8] = "Tempo                                             |";
+        qstarm1opc3[9] = "Melodías rápidas                                  |";
+        qstarm1opc4[0] = "La organización de ritmos                         |";//opcion 4
+        qstarm1opc4[1] = "El compás                                         |";
+        qstarm1opc4[2] = "Modulación                                        |";
+        qstarm1opc4[3] = "Un sonido que genera tensión                      |";
+        qstarm1opc4[4] = "Movimiento o cambio                               |";
+        qstarm1opc4[5] = "Harmenein                                         |";
+        qstarm1opc4[6] = "Estructura, color emocional y soporte a la melodía|";
+        qstarm1opc4[7] = "Tonalidad                                         |";
+        qstarm1opc4[8] = "Timbre                                            |";
+        qstarm1opc4[9] = "Escalas mayores únicamente                        |";
         int[] respuestasCorrectas = {2, 3, 3, 4, 2, 2, 4, 3, 1, 1};//aciertos
         for (int i = 0; i < respuestasCorrectas.length; i++) {//aqui solo se modifican los aciertos NO SE TOCA NADA MÁS
             screen();
             System.out.println("        |                                                                    |");
-            System.out.print("        |     Pregunta " + (i + 1)+ " ");
+            System.out.print("        |     Pregunta " + (i + 1) + " ");
             System.out.println(qstarm1[i]);
             System.out.println("        |                                                                    |");
             System.out.print("        |              1)  ");
@@ -1929,11 +2065,11 @@ public class DJPython {
             System.out.println("        |        Tu respuesta:                                               |");//esto no se modifica
             System.out.println("        |____________________________________________________________________|");
             int respuesta = scanner.nextInt();
-            if(respuesta<1||respuesta>4) {
+            if (respuesta < 1 || respuesta > 4) {
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
                 i--;
-            }else if (respuesta == respuestasCorrectas[i]) {
+            } else if (respuesta == respuestasCorrectas[i]) {
                 aciertos++;
                 System.out.println("Tu respuesta es correcta");
                 pausar();
@@ -1943,44 +2079,45 @@ public class DJPython {
                 pausar();
             }
         }
-        if (aciertos==10){
+        if (aciertos == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                   |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else if(errores==10){
+        } else if (errores == 10) {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                    |");
+            System.out.println("        |     Errores: " + errores + "                                                    |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
-        }else{
+        } else {
             screen();
             System.out.println("        |                                                                    |");
             System.out.println("        |     Resultados del cuestionario:                                   |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Aciertos: " + aciertos+"                                                    |");
+            System.out.println("        |     Aciertos: " + aciertos + "                                                    |");
             System.out.println("        |                                                                    |");
-            System.out.println("        |     Errores: " + errores+"                                                     |");
+            System.out.println("        |     Errores: " + errores + "                                                     |");
             System.out.println("        |____________________________________________________________________|");
             pausar();
             cuestionarios();
         }
     }
+
     //acaba el módulo de teoría musical
     //inicio del modulo de equipo de audio
-    public static void equipo(){//menu de equipo de audio
+    public static void equipo() {//menu de equipo de audio
         screen();
         System.out.println("        |                                                                    |");
         System.out.println("        |                     Elija la Subsección Deseada                    |");
@@ -1997,18 +2134,24 @@ public class DJPython {
         System.out.println("        |____________________________________________________________________|");
         equint();
     }
-    public static void equint(){//lector del menu de equipo de audio
+
+    public static void equint() {//lector del menu de equipo de audio
         int userequinput = scanner.nextInt();
-        switch (userequinput){
-            case 1: instrumentos();
+        switch (userequinput) {
+            case 1:
+                instrumentos();
                 break;
-            case 2: IEMs();
+            case 2:
+                IEMs();
                 break;
-            case 3: DAC();
+            case 3:
+                DAC();
                 break;
-            case 4: Accesorios();
+            case 4:
+                Accesorios();
                 break;
-            case 5: proceso1();
+            case 5:
+                menu();
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
@@ -2021,34 +2164,154 @@ public class DJPython {
     private static void instrumentos() {//aqui va la lista de instrumentos
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                        lista de instruemntos                       |");
+        System.out.println("        |           Seleccione el tipo de instrumento que desea ver          |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            1. Guitarra                             |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            2. Piano                                |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            3. Violín                               |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            4. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
-        pausar();
-        equipo();
+        int userins = scanner.nextInt();
+        switch (userins) {
+            case 1:
+                guit();
+                break;
+            case 2:
+                piano();
+                break;
+            case 3:
+                violin();
+                break;
+            case 4:
+                equipo();
+            default:
+                System.out.println("La opción es inválida, seleccione una opción válida");
+                pausar();
+                instrumentos();
+                break;
+        }
+
     }
     private static void IEMs() {//aqui va la lista de IEMs
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                           lista de IEMs                            |");
+        System.out.println("        |               Seleccione el tipo de IEM que desea ver              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            1. Planar                               |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            2. DD Puro                              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            3. BA Pura                              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            4. Híbrido                              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            5. Tribrid                              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            6. Regresar                             |");
         System.out.println("        |____________________________________________________________________|");
-        pausar();
-        equipo();
+        int useriem = scanner.nextInt();
+        switch (useriem) {
+            case 1:
+                planar();
+                break;
+            case 2:
+                DDpuro();
+                break;
+            case 3:
+                BApura();
+                break;
+            case 4 :
+                hib();
+                break;
+            case 5:
+                Tribrid();
+            case 6:
+                equipo();
+                break;
+            default:
+            System.out.println("La opción es inválida, seleccione una opción válida");
+            pausar();
+            IEMs();
+        }
     }
     private static void DAC() {//aqui va la lista de DAC
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                            lista de DAC                            |");
+        System.out.println("        |               Seleccione el tipo de DAC que desea ver              |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            1. Dongle                               |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            2. Portátil                             |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            3. Escritorio                           |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            4. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
-        pausar();
-        equipo();
+        int userdac = scanner.nextInt();
+        switch (userdac) {
+            case 1:
+                dongle();
+                break;
+            case 2:
+                port();
+                break;
+            case 3:
+                escrit();
+                break;
+            case 4:
+                equipo();
+            default:
+                System.out.println("La opción es inválida, seleccione una opción válida");
+                pausar();
+                DAC();
+                break;
+        }
     }
     private static void Accesorios() {//aqui va la lista de accesorios
         screen();
         System.out.println("        |                                                                    |");
-        System.out.println("        |                         lista de accesorios                        |");
+        System.out.println("        |              Seleccione el tipo de accesorio que desea ver         |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            1. Puntas                               |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            2. Cables                               |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            3. Adaptadores                          |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            4. Estuches                             |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            5. Para audífonos                       |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            6. Limpieza y mantenimiento             |");
+        System.out.println("        |                                                                    |");
+        System.out.println("        |                            7. Volver                               |");
         System.out.println("        |____________________________________________________________________|");
-        pausar();
-        equipo();
+        int useracc = scanner.nextInt();
+        switch(useracc){
+            case 1: puntas();
+                break;
+            case 2: cables();
+                break;
+            case 3: adapt();
+                break;
+            case 4: estuches();
+                break;
+            case 5: audifonos();
+                break;
+            case 6: lm();
+                break;
+            case 7:
+                equipo();
+                break;
+            default:
+                System.out.println("La opción es inválida, seleccione una opción válida");
+                pausar();
+                Accesorios();
+                break;
+        }
     }//acaba el módulo de equipo de audio
     //inicia el módulo de librerias
     public static void librerias(){//menu genral de las librerias
@@ -2578,5 +2841,312 @@ public class DJPython {
         System.out.println("        |                                 __/ |                              |");
         System.out.println("        |                                |___/                               |");
         System.out.println("        |____________________________________________________________________|");
+    }
+    private static void screenequip()
+    {
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("         _____________________________________________________________________________________________________________________");
+        System.out.println("        |                                                                                                                     |");
+        System.out.println("        |                                     _____       _   _____       _   _                                               |");
+        System.out.println("        |                                    |  __ \\     | | |  __ \\     | | | |                                              |");
+        System.out.println("        |                                    | |  | |    | | | |__) |   _| |_| |__   ___  _ __                                |");
+        System.out.println("        |                                    | |  | |_   | | |  ___/ | | | __| '_ \\ / _ \\| '_ \\                               |");
+        System.out.println("        |                                    | |__| | |__| | | |   | |_| | |_| | | | (_) | | | |                              |");
+        System.out.println("        |                                    |_____/ \\____/  |_|    \\__, |\\__|_| |_|\\___/|_| |_|                              |");
+        System.out.println("        |                                                            __/ |                                                    |");
+        System.out.println("        |                                                           |___/                                                     |");
+        System.out.println("        |_____________________________________________________________________________________________________________________|");
+    }
+    private static void guit()
+    {
+        screenequip();
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        | TIPO INSTR.   |       MODELO (FABRICANTE)       |   PRECIO (MXN)   |          PERFIL DE USO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        |  Guitarra     |  Acústica Parlor (Gretsch JD)   |      $4,200      |  Folk, blues, sonido vintage y portátil.       |");
+        System.out.println("        |  Guitarra     |  Acústica Folk (Yamaha FG800)   |      $6,500      |  Estudiante, acompañamiento, tono cálido.      |");
+        System.out.println("        |  Guitarra     |  Electroacústica (Fender CD60)  |      $7,800      |  En vivo, acústico-amplificado, versátil.      |");
+        System.out.println("        |  Guitarra     |  Clásica (Alhambra 3C)          |      $9,500      |  Clásica y fingerstyle, tono profundo.         |");
+        System.out.println("        |  Guitarra     |  Eléctrica Strat (Squier CV)    |      $12,000     |  Rock, blues, sonido brillante.                |");
+        System.out.println("        |  Guitarra     |  Eléctrica Les Paul (Epiphone)  |      $13,500     |  Rock pesado, sustain largo, tono grueso.      |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        pausar();
+        instrumentos();
+    }
+    private static void piano()
+    {
+        screenequip();
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        | TIPO INSTR.   |       MODELO (FABRICANTE)       |   PRECIO (MXN)   |          PERFIL DE USO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        |  Teclado      |  Teclado Port. (Casio CT-X800)  |      $5,800      |  Principiantes, arreglos automáticos.          |");
+        System.out.println("        |  Piano        |  Sintetizador (Korg Minilogue)  |      $15,000     |  Producción moderna, timbres analógicos.       |");
+        System.out.println("        |  Piano        |  Piano Digital 88 (Yamaha P-125)|      $15,500     |  Práctica diaria, portátil, sonido realista.   |");
+        System.out.println("        |  Piano        |  Piano Digital (Roland FP-30X)  |      $18,500     |  Estudio, práctica avanzada, acción realista.  |");
+        System.out.println("        |  Piano        |  Workstation (Yamaha MODX6+)    |      $30,000     |  Escenario, producción, miles de sonidos.      |");
+        System.out.println("        |  Piano        |  Piano Vertical (Yamaha U1)     |      $50,000     |  Profesional, hogar, estudios.                 |");
+        System.out.println("        |  Piano        |  Piano Baby Grand (Kawai GL-10) |      $190,000    |  Profesional, salas pequeñas.                  |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        pausar();
+        instrumentos();
+    }
+    private static void violin()
+    {
+        screenequip();
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        | TIPO INSTR.   |       MODELO (FABRICANTE)       |   PRECIO (MXN)   |          PERFIL DE USO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        System.out.println("        |               |                                 |                  |                                                |");
+        System.out.println("        |  Violín       |  Violín Estudiante 4/4 (Cecilio)|      $4,000      |  Principiantes, sonido accesible.              |");
+        System.out.println("        |  Violín       |  Violín Intermedio (Yamaha V3)  |      $9,000      |  Orquesta escolar, práctica avanzada.          |");
+        System.out.println("        |  Violín       |  Violín Barroco (Kinglos KNG)   |      $12,000     |  Música antigua, sonido ligero y brillante.    |");
+        System.out.println("        |  Violín       |  Violín Eléctrico (Yamaha SV200)|      $20,000     |  Amplificado, sonido moderno.                  |");
+        System.out.println("        |  Violín       |  Violín Profesional (Stentor)   |      $25,000     |  Solistas, uso profesional.                    |");
+        System.out.println("        |  Violín       |  Violín 4/4 Premium (Scott Cao) |      $35,000     |  Réplica histórica, sonido rico.               |");
+        System.out.println("        |  Violín       |  Violín Artístico (Holstein)    |      $40,000     |  Tono cálido, músicos avanzados.               |");
+        System.out.println("        |_______________|_________________________________|__________________|________________________________________________|");
+        pausar();
+        instrumentos();
+    }
+    private static void planar()
+    {
+        screenequip();
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  TIPO DRIVER  |  MODELO (FABRICANTE)  |  REC  |  PRECIO (MXN)  |           PERFIL DE SONIDO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  Planar       |  Moondrop Stellaris   |  1PL  |    $1,962      |  Sonido grande y potente, Enfocado a la diversión. |");
+        System.out.println("        |  Planar       |  Letshuoer S12 Pro    |  1PL  |    $3,042      |  Brillante, Energético, Énfasis en detalle.        |");
+        System.out.println("        |  Planar       |  7Hz Timeless (7Hz)   |  1PL  |    $3,960      |  Rápido, Detallado, Bajo controlado.               |");
+        System.out.println("        |  Planar       |  Raptgo Hook-X        |  2DR  |    $4,302      |  Híbrido Planar (con PZT), Abierto y detallado.    |");
+        System.out.println("        |  Planar       |  Audeze Euclid        |  1PL  |    $23,382     |  Natural, Fiel a la fuente, Gran bajo.             |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+
+        pausar();
+        IEMs();
+    }
+    private static void DDpuro()
+    {
+        screenequip();
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  TIPO DRIVER  |  MODELO (FABRICANTE)  |  REC  |  PRECIO (MXN)  |           PERFIL DE SONIDO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  DD Puro      |  TANGZU Zetian Wu     |  1DD  |    $3,582      |  Natural, Bien equilibrado, Énfasis en cuerpo.     |");
+        System.out.println("        |  DD Puro      |  Dunu Falcon Ultra    |  1DD  |    $4,320      |  Vibrante, Musical, Personalizable (boquillas).    |");
+        System.out.println("        |  DD Puro      |  Final Audio E5000    |  1DD  |    $5,382      |  Cálido, Relajado, Enfocado en sub-graves.         |");
+        System.out.println("        |  DD Puro      |  Sony MDR-EX1000      |  1DD  |    $9,000      |  Amplio escenario, Sonido de referencia.           |");
+        System.out.println("        |  DD Puro      |  Sennheiser IE 600    |  1DD  |    $12,600     |  Potente Sub-bajo, Agudos detallados.              |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+
+        pausar();
+        IEMs();
+    }
+    private static void BApura()
+    {
+        screenequip();
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  TIPO DRIVER  |  MODELO (FABRICANTE)  |  REC  |  PRECIO (MXN)  |           PERFIL DE SONIDO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  BA Pura      |  Etymotic ER4XR (Etym)|  1BA  |    $5,382      |  Referencia, Analítico, Énfasis graves.            |");
+        System.out.println("        |  BA Pura      |  Sennheiser IE 400 PRO|  1BA  |    $6,282      |  Monitorización, Medios muy presentes.             |");
+        System.out.println("        |  BA Pura      |  Moondrop S8 (Mdrp)   |  8BA  |    $12,582     |  Detallado, Neutro con ligera elevación Ag.        |");
+        System.out.println("        |  BA Pura      |  Shure SE846 (Shure)  |  4BA  |    $16,182     |  Cálido, Sub-bajo filtrado, Medios suaves.         |");
+        System.out.println("        |  BA Pura      |  Westone W80 (Westone)|  8BA  |    $23,382     |  Suave, Musical, Gran escenario.                   |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+
+        pausar();
+        IEMs();
+    }
+    private static void hib()
+    {
+        screenequip();
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  TIPO DRIVER  |  MODELO (FABRICANTE)  |  REC  |  PRECIO (MXN)  |           PERFIL DE SONIDO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  Híbrido      |  Moondrop Variations  |  5DR  |    $9,360      |  Sub-bajo potente, Agudos extendidos.              |");
+        System.out.println("        |  Híbrido      |  Fiio FH9 (Fiio)      |  7DR  |    $10,800     |  Bajo Impactante, Detalle, Vivo y brillante.       |");
+        System.out.println("        |  Híbrido      |  Kinera Nanna         |  4DR  |    $16,200     |  Suave, Natural, Gran cohesión.                    |");
+        System.out.println("        |  Híbrido      |  ThieAudio Monarch MK2|  9DR  |    $17,982     |  Técnico, Gran resolución, Perfil 'W'.             |");
+        System.out.println("        |  Híbrido      |  Campfire Andromeda   |  5BA  |    $19,782     |  Rico, Musical, Agudos chispeantes.                |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        pausar();
+        IEMs();
+    }
+    private static void Tribrid()
+    {
+        screenequip();
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  TIPO DRIVER  |  MODELO (FABRICANTE)  |  REC  |  PRECIO (MXN)  |           PERFIL DE SONIDO CARACTERÍSTICO          |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        System.out.println("        |               |                       |       |                |                                                    |");
+        System.out.println("        |  Tribrid(EST) |  Fiio FX15 (Fiio)     |  6DR  |    $10,782     |  Detalle y extensión de agudos (Modo EST).         |");
+        System.out.println("        |  Tribrid(EST) |  Crinacle x Dawn      |  7DR  |    $11,700     |  Extremadamente detallado, Agudos con aire.        |");
+        System.out.println("        |  Tribrid(EST) |  Unique Melody MEST 2 |  8DR  |    $26,982     |  Orgánico con Bone Conduction.                     |");
+        System.out.println("        |  Tribrid(EST) |  Sony IER-Z1R (Sony)  |  3DR  |    $30,600     |  Bajo profundo, Sonido amplio y envolvente.        |");
+        System.out.println("        |  Tribrid(EST) |  Elysian Annihilator  |  9DR  |    $63,000     |  Máxima resolución, Referencia técnica, Vasto.     |");
+        System.out.println("        |_______________|_______________________|_______|________________|____________________________________________________|");
+        pausar();
+        IEMs();
+    }
+    private static void dongle()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        | TIPO DE DISPOSITIVO  |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Dongle DAC          |  Apple USB-C                         |        $500       |  Máxima portabilidad.             |");
+        System.out.println("        |  Dongle DAC          |  Tempotec Sonata HD Pro              |       $1,000      |  Excelente relación calidad/precio|");
+        System.out.println("        |  Dongle DAC          |  FiiO KA2                            |       $1,500      |  Doble salida 3.5mm y 4.4mm.      |");
+        System.out.println("        |  Dongle DAC          |  Moondrop Dawn Pro                   |       $1,800      |  Chip dual, estética equilibrada. |");
+        System.out.println("        |  Dongle DAC          |  FiiO KA13                           |       $2,000      |  Modo “Desktop” en un dongle.     |");
+        System.out.println("        |  Dongle DAC          |  iBasso DC04PRO                      |       $2,500      |  Bajo ruido y doble chip DAC.     |");
+        System.out.println("        |  Dongle DAC          |  Shanling UA5                        |       $3,500      |  Pantalla OLED, control analógico.|");
+        System.out.println("        |  Dongle DAC          |  AudioQuest DragonFly Red            |       $4,500      |  Tono cálido y popular.           |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        DAC();
+    }
+    private static void port()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        | TIPO DE DISPOSITIVO  |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  DAC Portátil        |  iFi Go Blu                          |       $4,000      |  Bluetooth Hi-Res, XBass.         |");
+        System.out.println("        |  DAC Portátil        |  FiiO BTR7                           |       $5,000      |  Bluetooth + USB, pantalla.       |");
+        System.out.println("        |  DAC Portátil        |  iFi Hip-DAC 3                       |       $5,500      |  TrueBass analógico.              |");
+        System.out.println("        |  DAC Portátil        |  Topping G5                          |       $8,500      |  Ultrabajo ruido, alta potencia.  |");
+        System.out.println("        |  DAC Portátil        |  Chord Mojo 2                        |      $14,000      |  DSP avanzado, control tonal.     |");
+        System.out.println("        |  DAC Portátil        |  Astell&Kern SR35                    |      $19,000      |  DAP dedicado de alta fidelidad.  |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        DAC();
+    }
+    private static void escrit()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        | TIPO DE DISPOSITIVO  |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  DAC Escritorio      |  SMSL SU-1                           |       $2,200      |  Entrada Hi-Res de bajo costo.    |");
+        System.out.println("        |  DAC Escritorio      |  Topping E30 II                      |       $3,500      |  Chip AK4493S, ruido ultrabajo.   |");
+        System.out.println("        |  DAC Escritorio      |  Schiit Modi 3+                      |       $4,000      |  Tono suave, hecho en USA.        |");
+        System.out.println("        |  DAC Escritorio      |  iFi Zen DAC V2                      |       $4,500      |  TrueBass, MQA, tono musical.     |");
+        System.out.println("        |  DAC Escritorio      |  Topping DX3 Pro+                    |       $6,000      |  Compacto, Bluetooth Hi-Res.      |");
+        System.out.println("        |  DAC Escritorio      |  Geshelli Labs J2                    |       $6,500      |  Transparencia extrema.           |");
+        System.out.println("        |  DAC Escritorio      |  Topping D50s                        |       $7,000      |  Dual ES9038Q2M, Bluetooth.       |");
+        System.out.println("        |  DAC Escritorio      |  FiiO K7                             |       $7,000      |  Todo-en-uno, balanceado.         |");
+        System.out.println("        |  DAC Escritorio      |  SMSL DL200                          |       $8,000      |  Buen rendimiento.                |");
+        System.out.println("        |  DAC Escritorio      |  Schiit Magni/Modi Stack             |       $8,500      |  Configuración modular.           |");
+        System.out.println("        |  DAC Escritorio      |  Audeze Deckard                      |      $10,000      |  Especial para planares.          |");
+        System.out.println("        |  DAC Escritorio      |  SMSL DO300EX                        |      $11,000      |  MQA, alto rendimiento.           |");
+        System.out.println("        |  DAC Escritorio      |  FiiO K9 Pro ESS                     |      $20,000      |  Conectividad completa.           |");
+        System.out.println("        |  DAC Escritorio      |  Topping D90SE/A90D Stack            |      $40,000      |  Potencia máxima.                 |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        DAC();
+    }
+    private static void puntas()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Puntas (Silicona)   |  Dunu S&S Tips                       |        $350       |  Énfasis en graves y ajuste firme.|");
+        System.out.println("        |  Puntas (Silicona)   |  Final Audio Type E                  |        $400       |  Suaviza agudos y refuerza bajos. |");
+        System.out.println("        |  Puntas (Silicona)   |  SpinFit CP100+                      |        $450       |  Confort y mejor sello rotacional.|");
+        System.out.println("        |  Puntas (Espuma)     |  Dekoni Bulletz                      |        $500       |  Espuma densa, gran sello.        |");
+        System.out.println("        |  Puntas (Espuma)     |  Comply T-500                        |        $550       |  Máximo aislamiento y confort.    |");
+        System.out.println("        |  Puntas (Silicona)   |  Azla SednaEarfit Crystal            |        $600       |  Mayor claridad por su rigidez.   |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+
+        pausar();
+        Accesorios();
+    }
+    private static void cables()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Cable de Reemplazo  |  NiceHCK C8                          |        $650       |  Durable y estético.              |");
+        System.out.println("        |  Cable de Reemplazo  |  Tripowin Zonie 4.4mm                |        $800       |  Conexión balanceada y potencia.  |");
+        System.out.println("        |  Cable/Micrófono     |  Shure RMCE-UNI (MMCX)               |       $1,500      |  Micrófono premium para IEMs.     |");
+        System.out.println("        |  Cable de Reemplazo  |  Linsoul LSC08                       |       $1,500      |  Cobre puro, tono cálido.         |");
+        System.out.println("        |  Cable de Reemplazo  |  Dunu DUW02 (Modular)                |       $2,000      |  Sistema Quick-Switch modular.    |");
+        System.out.println("        |  Cable de Reemplazo  |  Plussound Copper+                   |       $6,000      |  Perfil audiófilo de alta gama.   |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+
+        pausar();
+        Accesorios();
+    }
+    private static void adapt()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Divisor de Audio    |  Y-Splitter                          |        $100       |  Comparte audio con dos personas. |");
+        System.out.println("        |  Adaptador de Audio  |  Adaptador de Vuelo 2-pin            |        $150       |  Para entretenimiento de avión.   |");
+        System.out.println("        |  Adaptador de Audio  |  Cable con Micrófono (KZ)            |        $350       |  Añade manos libres.              |");
+        System.out.println("        |  Adaptador de Audio  |  DDHiFi DJ44B/DJ44A                  |        $400       |  Conversión rápida de jack.       |");
+        System.out.println("        |  Adaptador de Imped. |  Earbuddy de iFi                     |       $1,000      |  Empareja impedancia adecuada.    |");
+        System.out.println("        |  Adaptador de Audio  |  iFi IEMatch                         |       $1,500      |  Elimina hiss en IEMs sensibles.  |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        Accesorios();
+    }
+    private static void estuches()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Estuche Blando      |  FiiO HB1                            |        $300       |  Compacto y portátil.             |");
+        System.out.println("        |  Estuche Rígido      |  Pelican 1010 Micro Case             |        $650       |  Protección extrema.              |");
+        System.out.println("        |  Caja para IEMs      |  Hard Shell Case 6-slot              |       $1,000      |  Guarda colección de IEMs.        |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        Accesorios();
+    }
+    private static void audifonos()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Soporte Escritorio  |  Gancho tipo Clamp                   |        $300       |  Ahorra espacio en escritorio.    |");
+        System.out.println("        |  Soporte Diadema     |  Omega Madera/Metal                  |        $800       |  Organización elegante.           |");
+        System.out.println("        |  Almohadillas        |  Brainwavz XL Memory Foam            |        $800       |  Mayor aislamiento y confort.     |");
+        System.out.println("        |  Almohadillas        |  Dekoni Choice Suede                 |       $1,200      |  Comodidad y ajuste de sonido.    |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        Accesorios();
+    }
+    private static void lm()
+    {
+        screenequip();
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        System.out.println("        |                      |                                      |                   |                                   |");
+        System.out.println("        |  Mantenimiento       |  Desecante (Sílice)                  |        $100       |  Controla humedad del estuche.    |");
+        System.out.println("        |  Limpieza            |  Kit con brocha                      |        $250       |  Remueve cera y polvo.            |");
+        System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
+        pausar();
+        Accesorios();
     }
 }
