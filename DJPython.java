@@ -2187,6 +2187,7 @@ public class DJPython {
                 break;
             case 4:
                 equipo();
+                break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
@@ -2228,13 +2229,15 @@ public class DJPython {
                 break;
             case 5:
                 Tribrid();
+                break;
             case 6:
                 equipo();
                 break;
             default:
-            System.out.println("La opción es inválida, seleccione una opción válida");
-            pausar();
-            IEMs();
+                System.out.println("La opción es inválida, seleccione una opción válida");
+                pausar();
+                IEMs();
+                break;
         }
     }
     private static void DAC() {//aqui va la lista de DAC
@@ -2263,6 +2266,7 @@ public class DJPython {
                 break;
             case 4:
                 equipo();
+                break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
                 pausar();
@@ -2796,7 +2800,7 @@ public class DJPython {
         System.out.println("        |                           Playlist 2 R&B                           |");
         System.out.println("        |                                                                    |");
         System.out.println("        |                            Talk - Khalid                           |");
-        System.out.println("        |                           Crew - GoldLink                          |");
+        System.out.println("        |                          Crew - GoldLink                           |");
         System.out.println("        |                   Come and See Me - PARTYNEXTDOOR                  |");
         System.out.println("        |                      Exchange - Bryson Tiller                      |");
         System.out.println("        |                        Don't - Bryson Tiller                       |");
@@ -3128,7 +3132,7 @@ public class DJPython {
         System.out.println("        |  TIPO DE ACCESORIO   |         MODELO (FABRICANTE)          |    PRECIO (MXN)   |      CARACTERÍSTICA DESTACADA     |");
         System.out.println("        |______________________|______________________________________|___________________|___________________________________|");
         System.out.println("        |                      |                                      |                   |                                   |");
-        System.out.println("        |  Soporte Escritorio  |  Gancho tipo Clamp                   |        $300       |  Ahorra espacio en escritorio.    |");
+        System.out.println("        |  Soporte Escritorio  |  Gancho tipo Clamp                   |        $300       |  Ahorra espacio en el escritorio. |");
         System.out.println("        |  Soporte Diadema     |  Omega Madera/Metal                  |        $800       |  Organización elegante.           |");
         System.out.println("        |  Almohadillas        |  Brainwavz XL Memory Foam            |        $800       |  Mayor aislamiento y confort.     |");
         System.out.println("        |  Almohadillas        |  Dekoni Choice Suede                 |       $1,200      |  Comodidad y ajuste de sonido.    |");
