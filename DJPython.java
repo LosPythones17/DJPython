@@ -64,21 +64,21 @@ public class DJPython {
 
     public static void proceso1() {
         menu();
-        String userinput = scanner.nextLine();
+        int userinput = scanner.nextInt();
         switch (userinput) {
-            case "1":
+            case 1:
                 descubrimiento();
                 break;
-            case "2":
+            case 2:
                 teoria();
                 break;
-            case "3":
+            case 3:
                 equipo();
                 break;
-            case "4":
+            case 4:
                 librerias();
                 break;
-            case "5":
+            case 5:
                 ejecutando = false;
                 break;
             default:
@@ -129,27 +129,27 @@ public class DJPython {
     }
 
     public static void desint() { //lector de descubrimiento
-        String userdesinput = scanner.nextLine();
+        int userdesinput = scanner.nextInt();
         switch (userdesinput) {
-            case "1":
+            case 1:
                 rockdesint();
                 break;
-            case "2":
+            case 2:
                 popdesint();
                 break;
-            case "3":
+            case 3:
                 folkdesint();
                 break;
-            case "4":
+            case 4:
                 indiedesint();
                 break;
-            case "5":
+            case 5:
                 hipdesint();
                 break;
-            case "6":
+            case 6:
                 rbdesint();
                 break;
-            case "7":
+            case 7:
                 proceso1();
                 break;
             default:
@@ -178,24 +178,24 @@ public class DJPython {
     //modulo de rock
     public static void rockdesint() {
         desmenu();
-        String rockdesint = scanner.nextLine();
+        int rockdesint = scanner.nextInt();
         switch (rockdesint) {
-            case "1":
+            case 1:
                 similarrock();
                 pausar();
                 rockdesint();
                 break;
-            case "2":
+            case 2:
                 artistasrock();
                 pausar();
                 rockdesint();
                 break;
-            case "3":
+            case 3:
                 albumrock();
                 pausar();
                 rockdesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -250,24 +250,24 @@ public class DJPython {
     //modulo de pop
     public static void popdesint() {//lector de pop
         desmenu();
-        String popdesint = scanner.nextLine();
+        int popdesint = scanner.nextInt();
         switch (popdesint) {
-            case "1":
+            case 1:
                 similarpop();
                 pausar();
                 popdesint();
                 break;
-            case "2":
+            case 2:
                 artistaspop();
                 pausar();
                 popdesint();
                 break;
-            case "3":
+            case 3:
                 albumpop();
                 pausar();
                 popdesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -324,24 +324,24 @@ public class DJPython {
     //modulo de folk
     public static void folkdesint() {//lector de folk
         desmenu();
-        String folkdesint = scanner.nextLine();
+        int folkdesint = scanner.nextInt();
         switch (folkdesint) {
-            case "1":
+            case 1:
                 similarfolk();
                 pausar();
                 folkdesint();
                 break;
-            case "2":
+            case 2:
                 artistasfolk();
                 pausar();
                 folkdesint();
                 break;
-            case "3":
+            case 3:
                 albumfolk();
                 pausar();
                 folkdesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -396,24 +396,24 @@ public class DJPython {
     //modulo de indie
     public static void indiedesint() {//lector de indie
         desmenu();
-        String indiedesint = scanner.nextLine();
+        int indiedesint = scanner.nextInt();
         switch (indiedesint) {
-            case "1":
+            case 1:
                 similarindie();
                 pausar();
                 indiedesint();
                 break;
-            case "2":
+            case 2:
                 artistasindie();
                 pausar();
                 indiedesint();
                 break;
-            case "3":
+            case 3:
                 albumindie();
                 pausar();
                 indiedesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -468,24 +468,24 @@ public class DJPython {
     //modulo hip hop
     public static void hipdesint() {//lector de hip hop
         desmenu();
-        String hipdesint = scanner.nextLine();
+        int hipdesint = scanner.nextInt();
         switch (hipdesint) {
-            case "1":
+            case 1:
                 similarhip();
                 pausar();
                 hipdesint();
                 break;
-            case "2":
+            case 2:
                 artistaship();
                 pausar();
                 hipdesint();
                 break;
-            case "3":
+            case 3:
                 albumhip();
                 pausar();
                 hipdesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -540,24 +540,24 @@ public class DJPython {
     //modulo R%B
     public static void rbdesint() {//lector de R&B
         desmenu();
-        String rbdesint = scanner.nextLine();
+        int rbdesint = scanner.nextInt();
         switch (rbdesint) {
-            case "1":
+            case 1:
                 similarrb();
                 pausar();
                 rbdesint();
                 break;
-            case "2":
+            case 2:
                 artistasrb();
                 pausar();
                 rbdesint();
                 break;
-            case "3":
+            case 3:
                 albumrb();
                 pausar();
                 rbdesint();
                 break;
-            case "4":
+            case 4:
                 descubrimiento();
                 break;
             default:
@@ -631,24 +631,24 @@ public class DJPython {
     }
 
     public static void teoint() {//lectura de teoria musical
-        String userteoinput = scanner.nextLine();
+        int userteoinput = scanner.nextInt();
         switch (userteoinput) {
-            case "1":
+            case 1:
                 armonia();
                 break;
-            case "2":
+            case 2:
                 melodia();
                 break;
-            case "3":
+            case 3:
                 ritmo();
                 break;
-            case "4":
+            case 4:
                 escalas();
                 break;
-            case "5":
+            case 5:
                 cuestionarios();
                 break;
-            case "6":
+            case 6:
                 proceso1();
                 break;
             default:
@@ -822,33 +822,33 @@ public class DJPython {
     }
 
     public static void qstint() {//lectura de cuestionarios
-        String userqstint = scanner.nextLine();
+        int userqstint = scanner.nextInt();
         switch (userqstint) {
-            case "1":
+            case 1:
                 armonia1();
                 break;
-            case "2":
+            case 2:
                 armonia2();
                 break;
-            case "3":
+            case 3:
                 melodia1();
                 break;
-            case "4":
+            case 4:
                 melodia2();
                 break;
-            case "5":
+            case 5:
                 ritmo1();
                 break;
-            case "6":
+            case 6:
                 ritmo2();
                 break;
-            case "7":
+            case 7:
                 escalas1();
                 break;
-            case "8":
+            case 8:
                 escalas2();
                 break;
-            case "9":
+            case 9:
                 teoria();
                 break;
             default:
@@ -880,12 +880,12 @@ public class DJPython {
         System.out.println("        |                                                                    |");
         System.out.println("        |       Subtema: Mayor, menor, cromática y su impacto emocional      |");
         menucuestionarios();
-        String userqstint = scanner.nextLine();
+        int userqstint = scanner.nextInt();
         switch (userqstint) {
-            case "1":
+            case 1:
                 escalas2_1();
                 break;
-            case "2":
+            case 2:
                 cuestionarios();
                 break;
             default:
