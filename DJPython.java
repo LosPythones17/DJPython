@@ -80,6 +80,7 @@ public class DJPython {
                 break;
             case 5:
                 ejecutando = false;
+                System.out.println("Gracias por usar DJPython :)");
                 break;
             default:
                 System.out.println("La opción es inválida, seleccione una opción válida");
